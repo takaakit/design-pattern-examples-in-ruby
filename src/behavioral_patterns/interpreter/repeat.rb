@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+# ˅
+require_relative 'node'
+
+# ˄
+
+# A node corresponding to "repeat".
+class Repeat < Node
+  # ˅
+  
+  # ˄
+
+  public
+  def initialize
+
+    @number = 0
+
+    @command_list = nil
+
+    # ˅
+    
+    # ˄
+  end
+
+  public
+  def parse(context)
+    # ˅
+    context.slide_token("repeat")
+    @number = context.get_number
+    context.next_token
+    @command_list = CommandList.new()
+    @command_list.parse(context)
+    # ˄
+  end
+
+  public
+  def to_string
+    # ˅
+    return "[repeat " + @number + " " + @command_list.to_string + "]"
+    # ˄
+  end
+
+  # ˅
+  
+  # ˄
+end
+
+# ˅
+
+# ˄

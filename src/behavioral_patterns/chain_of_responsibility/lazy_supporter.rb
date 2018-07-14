@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+# ˅
+require_relative 'supporter'
+
+# ˄
+
+class LazySupporter < Supporter
+  # ˅
+
+  # ˄
+
+  public
+  def initialize(name)
+    # ˅
+    super
+    # ˄
+  end
+
+  # No troubles are handled.
+  protected
+  def handle(trouble)
+    # ˅
+    return false
+    # ˄
+  end
+
+  # ˅
+
+  # ˄
+end
+
+# ˅
+
+# ˄

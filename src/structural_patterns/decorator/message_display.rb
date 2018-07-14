@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+# ˅
+require_relative 'display'
+
+# ˄
+
+class MessageDisplay < Display
+  # ˅
+  
+  # ˄
+
+  public
+  def initialize(message)
+
+    # Message to be displayed
+    @message = message
+
+    # ˅
+    
+    # ˄
+  end
+
+  public
+  def get_columns
+    # ˅
+    return @message.length
+    # ˄
+  end
+
+  public
+  def get_rows
+    # ˅
+    return 1
+    # ˄
+  end
+
+  public
+  def get_line_text(row)
+    # ˅
+    if row == 0
+      return @message
+    else
+      return nil
+    end
+    # ˄
+  end
+
+  # ˅
+  
+  # ˄
+end
+
+# ˅
+
+# ˄
