@@ -68,8 +68,7 @@ end
 
 **Ruby 開発環境**
 * 任意の Ruby 開発環境を用意してください。[RubyMine](https://www.jetbrains.com/ruby/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/) など。
-* **Ruby/Tk** ライブラリも必要です。
-* **Ruby 2.0.0 + Tcl/Tk 8.5** で動作確認しました。
+* **Ruby/Tk** ライブラリが必要です。**Ruby 2.0.0 + Tcl/Tk 8.5** で動作することは確認済です。
 
 
 使い方

@@ -68,8 +68,7 @@ Installation
 
 **Development Environment for Ruby**
 * Prepare an arbitrary development environment for Ruby (e.g. [RubyMine](https://www.jetbrains.com/ruby/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/)).
-* **Ruby/Tk** library is required.
-* The operation has been confirmed in **Ruby 2.0.0** and **Tcl/Tk 8.5**.
+* **Ruby/Tk** library is required. The operation has been confirmed in **Ruby 2.0.0** and **Tcl/Tk 8.5**.
 
 Usage
 -----
