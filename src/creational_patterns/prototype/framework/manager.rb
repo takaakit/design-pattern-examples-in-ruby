@@ -31,7 +31,7 @@ class Manager
   def get_display(display_name)
     # ˅
     d = @display[display_name]
-    return d.clone
+    return d.create_clone
     # ˄
   end
 
