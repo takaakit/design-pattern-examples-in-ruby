@@ -4,7 +4,7 @@
 
 # ˄
 
-class Print
+module Print
   # ˅
   
   # ˄

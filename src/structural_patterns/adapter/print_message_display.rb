@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*-
 # ˅
 require_relative 'message_display'
+require_relative 'print'
 
 # ˄
 
 class PrintMessageDisplay < MessageDisplay
+  include Print
   # ˅
 
   # ˄
