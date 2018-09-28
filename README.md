@@ -3,7 +3,7 @@ Design Pattern Examples in Ruby
 
 English | [日本語](README_ja.md)
 
-Model and code examples of design patterns for Python.  
+Model and code examples of design patterns for Ruby.  
 You can utilize this examples as follows.
 
 * You try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
