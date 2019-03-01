@@ -44,7 +44,7 @@ class AppMain
     tk_canvas.pack
     tk_canvas.bind("B1-Motion", proc{|e| on_dragged(e.x, e.y)})
 
-    @canvas = PaintingCanvas.new(tk_canvas, @history)
+    @canvas = PaintingCanvas.new(tk_canvas)
 
     @clear_button = TkButton.new(@root)
     @clear_button.text = "clear"

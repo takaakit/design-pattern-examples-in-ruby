@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 # ˅
-require_relative 'history_command'
 require_relative 'painting_target'
 
 # ˄
@@ -12,15 +11,12 @@ class PaintingCanvas < PaintingTarget
   # ˄
 
   public
-  def initialize(canvas, history)
+  def initialize(canvas)
 
     @painting_color = "blue"
 
     # Radius of the painting point
     @point_radius = 6.0
-
-    # Painting history
-    @history = history
 
     @canvas = canvas
 
