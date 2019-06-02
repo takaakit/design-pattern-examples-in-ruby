@@ -59,8 +59,7 @@ class ColleagueButton < Colleague
   end
 
   # ˅
-  public
-  attr_accessor :mediator
+  
   # ˄
 end
 

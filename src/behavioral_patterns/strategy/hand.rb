@@ -10,6 +10,9 @@ class Hand
   # ˄
 
   public
+  attr_accessor :value
+
+  public
   def initialize(value)
 
     # Values of rock, scissors and paper.
@@ -58,8 +61,7 @@ class Hand
   end
 
   # ˅
-  public
-  attr_accessor :value
+  
   # ˄
 end
 

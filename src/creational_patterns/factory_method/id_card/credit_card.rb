@@ -11,6 +11,9 @@ class CreditCard < Product
   # ˄
 
   public
+  attr_accessor :owner
+
+  public
   def initialize(owner)
 
     @owner = owner
@@ -28,8 +31,7 @@ class CreditCard < Product
   end
 
   # ˅
-  public
-  attr_accessor :owner
+  
   # ˄
 end
 

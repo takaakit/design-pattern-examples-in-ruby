@@ -11,6 +11,9 @@ class Gamer
   # ˄
 
   public
+  attr_accessor :money
+
+  public
   def initialize(money)
 
     # Gamer's money
@@ -95,8 +98,7 @@ class Gamer
   end
 
   # ˅
-  public
-  attr_accessor :money
+  
   # ˄
 end
 

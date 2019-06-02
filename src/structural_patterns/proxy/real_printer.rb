@@ -11,6 +11,9 @@ class RealPrinter < Printer
   # ˄
 
   public
+  attr_accessor :printer_name
+
+  public
   def initialize(name)
 
     @printer_name = name
@@ -43,8 +46,7 @@ class RealPrinter < Printer
   end
 
   # ˅
-  public
-  attr_accessor :printer_name
+  
   # ˄
 end
 

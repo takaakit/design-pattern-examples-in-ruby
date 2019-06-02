@@ -12,6 +12,9 @@ class Number
   # ˄
 
   public
+  attr_accessor :value
+
+  public
   def initialize
 
     @value = 0
@@ -54,8 +57,7 @@ class Number
   end
 
   # ˅
-  public
-  attr_accessor :value
+  
   # ˄
 end
 

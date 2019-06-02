@@ -10,6 +10,9 @@ class Colleague
   # ˄
 
   public
+  attr_accessor :mediator
+
+  public
   def initialize
 
     @mediator = nil
@@ -28,8 +31,7 @@ class Colleague
   end
 
   # ˅
-  public
-  attr_accessor :mediator
+  
   # ˄
 end
 

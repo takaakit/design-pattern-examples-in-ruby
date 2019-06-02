@@ -12,6 +12,9 @@ class PrinterProxy < Printer
   # ˄
 
   public
+  attr_accessor :printer_name
+
+  public
   def initialize(name)
 
     @current_name = name
@@ -64,8 +67,7 @@ class PrinterProxy < Printer
   end
 
   # ˅
-  public
-  attr_accessor :printer_name
+  
   # ˄
 end
 

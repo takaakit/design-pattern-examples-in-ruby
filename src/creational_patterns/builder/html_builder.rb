@@ -11,6 +11,9 @@ class HTMLBuilder < Builder
   # ˄
 
   public
+  attr_accessor :result
+
+  public
   def initialize
 
     # File name to create
@@ -63,8 +66,7 @@ class HTMLBuilder < Builder
   end
 
   # ˅
-  public
-  attr_accessor :result
+  
   # ˄
 end
 

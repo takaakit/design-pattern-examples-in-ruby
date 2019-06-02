@@ -10,6 +10,9 @@ class Book
   # ˄
 
   public
+  attr_accessor :title
+
+  public
   def initialize(title)
 
     @title = title
@@ -20,8 +23,7 @@ class Book
   end
 
   # ˅
-  public
-  attr_accessor :title
+  
   # ˄
 end
 

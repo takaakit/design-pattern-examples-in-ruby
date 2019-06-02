@@ -13,6 +13,9 @@ class PaintingCommand < Command
   # ˄
 
   public
+  attr_accessor :painting_target
+
+  public
   def initialize(painting_target, painting_pos_x, painting_pos_y)
 
     # Painting position x
@@ -36,8 +39,7 @@ class PaintingCommand < Command
   end
 
   # ˅
-  public
-  attr_accessor :painting_target
+  
   # ˄
 end
 

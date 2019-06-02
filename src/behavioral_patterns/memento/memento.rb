@@ -10,6 +10,12 @@ class Memento
   # ˄
 
   public
+  attr_accessor :money
+
+  public
+  attr_accessor :desserts
+
+  public
   def initialize(money)
 
     # Money
@@ -32,10 +38,7 @@ class Memento
   end
 
   # ˅
-  public
-  attr_accessor :money
-  public
-  attr_accessor :desserts
+  
   # ˄
 end
 

@@ -11,6 +11,12 @@ class FileSystemElement < Element
   # ˄
 
   public
+  attr_accessor :name
+
+  public
+  attr_accessor :size
+
+  public
   def initialize(name, size)
 
     @name = name
@@ -30,10 +36,7 @@ class FileSystemElement < Element
   end
 
   # ˅
-  public
-  attr_accessor :name
-  public
-  attr_accessor :size
+  
   # ˄
 end
 

@@ -51,8 +51,7 @@ class ColleagueRadioButton < Colleague
   end
 
   # ˅
-  public
-  attr_accessor :mediator
+  
   # ˄
 end
 

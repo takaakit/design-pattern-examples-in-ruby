@@ -10,6 +10,9 @@ class Trouble
   # ˄
 
   public
+  attr_accessor :id
+
+  public
   def initialize(id)
 
     # Trouble number
@@ -28,8 +31,7 @@ class Trouble
   end
 
   # ˅
-  public
-  attr_accessor :id
+  
   # ˄
 end
 

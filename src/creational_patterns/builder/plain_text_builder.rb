@@ -11,6 +11,9 @@ class PlainTextBuilder < Builder
   # ˄
 
   public
+  attr_accessor :result
+
+  public
   def initialize
 
     # String to output
@@ -62,8 +65,7 @@ class PlainTextBuilder < Builder
   end
 
   # ˅
-  public
-  attr_accessor :result
+  
   # ˄
 end
 
