@@ -63,7 +63,7 @@ Installation
 
 **M PLUS plug-in**
 * Download the plug-in from [M PLUS plug-in site](https://sites.google.com/view/m-plus-plugin/download), and install.  
-  **Use ver.2.1 or higher.**
+  **Use ver.2.5.0 or higher.**
 
 **Development Environment for Ruby**
 * Prepare an arbitrary development environment for Ruby (e.g. [RubyMine](https://www.jetbrains.com/ruby/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/)).

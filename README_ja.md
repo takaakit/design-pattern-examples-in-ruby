@@ -63,7 +63,7 @@ end
 
 **M PLUS プラグイン**
 * [M PLUS プラグインのサイト](https://sites.google.com/view/m-plus-plugin/download)からプラグインをダウンロードしインストールしてください。  
-  **バージョン 2.1 以降をダウンロードしてください。**  
+  **バージョン 2.5.0 以降をダウンロードしてください。**  
 
 **Ruby 開発環境**
 * 任意の Ruby 開発環境を用意してください。[RubyMine](https://www.jetbrains.com/ruby/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/) など。
