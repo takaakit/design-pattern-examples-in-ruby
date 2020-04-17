@@ -34,7 +34,7 @@ class TextDisplayImpl < DisplayImpl
   public
   def impl_write
     # ˅
-    puts ":" + @text + ":"    # Enclose a text with "|" and display it.
+    puts ":" + @text + ":"    # Enclose a text with ":" and display it.
     # ˄
   end
 
@@ -48,11 +48,11 @@ class TextDisplayImpl < DisplayImpl
   private
   def print_line
     # ˅
-    print "*"             # Display "+" mark at the beginning of a frame.
-    for i in 0..@width-1  # Display "-" for the number of "width".
+    print "*"             # Display "*" mark at the beginning of a frame.
+    for i in 0..@width-1  # Display "." for the number of "width".
       print "."
     end
-    puts "*"              # Display "+" mark at the end of a frame.
+    puts "*"              # Display "*" mark at the end of a frame.
     # ˄
   end
 
