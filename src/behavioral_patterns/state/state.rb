@@ -41,13 +41,6 @@ class State
     # ˄
   end
 
-  public
-  def to_string
-    # ˅
-    
-    # ˄
-  end
-
   # ˅
   
   # ˄

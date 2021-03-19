@@ -20,13 +20,13 @@ class ListData < Data_
   public
   def to_html
     # ˅
-    buffer = []
-    buffer.push("<li>" + @name + "<ul>\n")
+    buffer = StringIO.new
+    buffer << "<li>#{@name}<ul>\n"
     for item in @items
-      buffer.push(item.to_html)
+      buffer << item.to_html
     end
-    buffer.push("</ul></li>\n")
-    return buffer.join
+    buffer << "</ul></li>\n"
+    return buffer.string
     # ˄
   end
 

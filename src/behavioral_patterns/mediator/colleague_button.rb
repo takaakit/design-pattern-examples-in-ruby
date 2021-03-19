@@ -19,8 +19,8 @@ class ColleagueButton < Colleague
     @button = button
 
     # ˅
-    @button.bind("ButtonPress-1", proc{on_mouse_pressed()})
-    @button.bind("ButtonRelease-1", proc{on_mouse_released()})
+    @button.bind("ButtonPress-1", proc{on_mouse_pressed})
+    @button.bind("ButtonRelease-1", proc{on_mouse_released})
     # ˄
   end
 
@@ -29,9 +29,9 @@ class ColleagueButton < Colleague
   def set_activation(is_enable)
     # ˅
     if is_enable
-      @button.configure(state: "normal")
+      @button.configure("state" => "normal")
     else
-      @button.configure(state: "disabled")
+      @button.configure("state" => "disabled")
     end
     # ˄
   end

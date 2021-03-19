@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
-require_relative 'id_card/credit_card_factory'
+require_relative 'credit_card/credit_card_factory'
 
 # Factory to make ID cards.
 
-factory = CreditCardFactory.new()
+factory = CreditCardFactory.new
 
-jackson_card = factory.create("Jacson")
+jackson_card = factory.create("Jackson")
 jackson_card.use
 
 sophia_card = factory.create("Sophia")

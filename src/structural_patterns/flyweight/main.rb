@@ -4,10 +4,8 @@ require_relative 'large_size_string'
 
 # First, create instances for displaying large size characters, then display large size character string using that instances.
 
-if ARGV.size() != 1
-  puts "Usage: ruby main.rb digits"
-  puts "Ex.  : ruby main.rb 1212123"
-else
-  bs = LargeSizeString.new(ARGV[0])
-  bs.display
-end
+puts "Please enter digits (ex. 1212123):"
+input_value = gets.chomp
+
+lss = LargeSizeString.new(input_value)
+lss.display

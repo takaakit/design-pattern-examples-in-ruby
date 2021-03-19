@@ -9,26 +9,8 @@ require_relative 'full_frame'
 display_a = MessageDisplay.new("Nice to meet you.")
 display_a.show
 
-display_b = SideFrame.new(display_a, "!")
+display_b = SideFrame.new(MessageDisplay.new("Nice to meet you."), "!")
 display_b.show
 
-display_c = FullFrame.new(display_b)
+display_c = FullFrame.new(SideFrame.new(MessageDisplay.new("Nice to meet you."), "!"))
 display_c.show
-
-display_d = SideFrame.new(
-               FullFrame.new(
-                   FullFrame.new(
-                       SideFrame.new(
-                           SideFrame.new(
-                               FullFrame.new(
-                                   MessageDisplay.new("See you again.")
-                               ),
-                               "#"
-                           ),
-                           "#"
-                       )
-                   )
-               ),
-               "#"
-)
-display_d.show

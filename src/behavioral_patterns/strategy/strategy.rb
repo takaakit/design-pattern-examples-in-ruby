@@ -10,14 +10,14 @@ class Strategy
   # ˄
 
   public
-  def next_hand
+  def show_hand_signal
     # ˅
     
     # ˄
   end
 
   public
-  def learn(win)
+  def notify_game_result(result, own_hand, opponents_hand)
     # ˅
     
     # ˄

@@ -39,10 +39,5 @@ class Factory
 end
 
 # ˅
-require_relative '../list_factory/list_factory'
-require_relative '../table_factory/table_factory'
-def get_factory(class_name)
-  cls = eval class_name
-  return cls.new()
-end
+
 # ˄

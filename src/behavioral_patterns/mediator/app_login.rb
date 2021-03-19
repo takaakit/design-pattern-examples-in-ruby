@@ -77,7 +77,7 @@ class AppLogin < Mediator
     @radio_login = ColleagueRadioButton.new(radio_button_login)
 
     text_field_frame = TkFrame.new(@root)
-    text_field_frame.pack()
+    text_field_frame.pack
 
     label_username = TkLabel.new(text_field_frame, "text" => "Username:")
     label_username.grid("row" => 0, "column" => 0)

@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 # ˅
+require 'singleton'
 require_relative 'state'
 require_relative 'daytime_state'
 
@@ -8,7 +9,7 @@ require_relative 'daytime_state'
 
 class NightState < State
   # ˅
-
+  include Singleton
   # ˄
 
   # Set time
@@ -16,7 +17,7 @@ class NightState < State
   def set_time(context, hour)
     # ˅
     if 9 <= hour and hour < 17
-      context.change_state(DaytimeState.new())
+      context.change_state(DaytimeState.instance)
     end
     # ˄
   end
@@ -46,7 +47,7 @@ class NightState < State
   end
 
   public
-  def to_string
+  def to_s
     # ˅
     return "[Night]"
     # ˄

@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 # ˅
+require 'pathname'
 require_relative 'item'
 
 # ˄
@@ -45,7 +46,8 @@ class Page
     File.open(file_name, "w") do |f|
       f.puts(to_html)
     end
-    puts file_name + " has been created."
+    puts "#{file_name} has been created."
+    puts "Output File: #{Pathname.new(Dir.pwd).join(file_name)}"
     # ˄
   end
 

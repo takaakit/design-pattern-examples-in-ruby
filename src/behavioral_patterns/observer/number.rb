@@ -41,7 +41,7 @@ class Number
   end
 
   public
-  def delete_observer(observer)
+  def remove_observer(observer)
     # ˅
     @observers.delete(observer)
     # ˄

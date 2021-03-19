@@ -12,18 +12,16 @@ class LargeSizeChar
   public
   def initialize(char_name)
 
-    @char_name = char_name
-
     # Display data of the large size character
     @display_data = ""
 
     # ˅
     begin
-      File.open(File.dirname(__FILE__) + "/" + "big" + @char_name + ".txt", "r") do |file|
+      File.open("#{File.dirname(__FILE__)}/big#{char_name}.txt", "r") do |file|
         @display_data = file.read
       end
     rescue
-      @display_data = @char_name + "?"
+      @display_data = "#{char_name}?"
     end
     # ˄
   end

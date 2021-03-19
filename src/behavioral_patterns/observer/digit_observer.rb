@@ -14,7 +14,7 @@ class DigitObserver < Observer
   public
   def update(number)
     # ˅
-    puts "Digit    : " + number.value.to_s
+    puts "Digit    : #{number.value}"
     sleep(0.1)
     # ˄
   end

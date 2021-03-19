@@ -19,12 +19,6 @@ class Gamer
     # Gamer's money
     @money = money
 
-    # Acquired desserts
-    @desserts = []
-
-    # Dessert name table
-    @desserts_name = ["Cake", "Candy", "Cookie"]
-
     # ˅
 
     # ˄
@@ -34,20 +28,15 @@ class Gamer
   public
   def create_memento
     # ˅
-    memento = Memento.new(@money)
-    for dessert in @desserts
-      memento.add_dessert(dessert)
-    end
-    return memento
+    return Memento.new(@money)
     # ˄
   end
 
   # Undo status
   public
-  def restore_memento(memento)
+  def set_memento(memento)
     # ˅
     @money = memento.money
-    @desserts = memento.desserts
     # ˄
   end
 
@@ -55,45 +44,32 @@ class Gamer
   public
   def play
     # ˅
-    random = Random.new()
-    dice = random.rand(1..6)
-    # In case of 1...Gamer's money increases
-    if dice == 1
-      @money += 100
-      puts "Gamer's money increases."
-    # In case of 2...Gamer's money halves
-    elsif dice == 2
+    random = Random.new
+    dice = random.rand(1..6)  # Shake a dice
+    puts "The number of dice is #{dice}."
+
+    pre_money = @money
+    case dice
+    when 1, 3, 5
+      # In case of odd...Money is halved
       @money /= 2
-      puts "Gamer's money halves."
-    # In case of 6...Gamer gets desserts
-    elsif dice == 5
-      got_dessert = get_dessert()
-      puts "Gamer gets desserts(" + got_dessert + ")"
-      @desserts.push(got_dessert)
-    # Other...Nothing happens
+      puts "Gamer's money is halved: #{pre_money} -> #{@money}"
+    when 2, 4, 6
+      # In case of even...Money doubles
+      @money *= 2
+      puts "Gamer's money doubles: #{pre_money} -> #{@money}"
     else
-      puts "Nothing happens."
+      # Other...Exit
+      puts "Unexpected value."
+      exit 1
     end
     # ˄
   end
 
   public
-  def to_string
+  def to_s
     # ˅
-    return "[money = " + @money.to_s() + ", desserts = " + @desserts.inspect + "]"
-    # ˄
-  end
-
-  # Get a dessert
-  private
-  def get_dessert
-    # ˅
-    prefix = ""
-    random = Random.new()
-    if random.rand(0..1)
-      prefix = "Delicious "
-    end
-    return prefix << @desserts_name.at(random.rand(0..2))
+    return "[money = #{@money}]"
     # ˄
   end
 

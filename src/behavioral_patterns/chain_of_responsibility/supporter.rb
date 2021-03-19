@@ -28,9 +28,9 @@ class Supporter
   public
   def support(trouble)
     # ˅
-    if handle(trouble)
+    if can_handle(trouble)
       supported(trouble)
-    elsif @next != nil
+    elsif @next.nil? == false
       @next.support(trouble)
     else
       unsupported(trouble)
@@ -50,12 +50,12 @@ class Supporter
   public
   def to_string
     # ˅
-    return "[" + @name + "]"
+    return "[#{@name}]"
     # ˄
   end
 
   protected
-  def handle(trouble)
+  def can_handle(trouble)
     # ˅
 
     # ˄
@@ -65,7 +65,7 @@ class Supporter
   private
   def supported(trouble)
     # ˅
-    puts trouble.to_string() + " was handled by " + @name + "."
+    puts "#{trouble} was handled by #{@name}."
     # ˄
   end
 
@@ -73,7 +73,7 @@ class Supporter
   private
   def unsupported(trouble)
     # ˅
-    puts trouble.to_string() + " was not handled."
+    puts "#{trouble} was not handled."
     # ˄
   end
 

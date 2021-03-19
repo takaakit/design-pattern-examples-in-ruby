@@ -26,19 +26,18 @@ class Program < Node
   def parse(context)
     # ˅
     context.slide_token("program")
-    @command_list = CommandList.new()
-    @command_list.parse(context)
+    
+    a_command_list = CommandList.new
+    a_command_list.parse(context)
+    
+    @command_list = a_command_list    # Hold the parsed command list
     # ˄
   end
 
   public
-  def to_string
+  def to_s
     # ˅
-    if @command_list != nil
-      return "[proguram " + @command_list.to_string + "]"
-    else
-      return ""
-    end
+    return "[program #{@command_list}]"
     # ˄
   end
 

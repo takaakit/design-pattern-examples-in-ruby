@@ -25,7 +25,7 @@ class ListVisitor < Visitor
   public
   def visit_file(file)
     # ˅
-    puts @current_directory + "/" + file.to_string()
+    puts "#{@current_directory}/#{file}"
     # ˄
   end
 
@@ -33,11 +33,10 @@ class ListVisitor < Visitor
   public
   def visit_directory(directory)
     # ˅
-    puts @current_directory + "/" + directory.to_string()
+    puts "#{@current_directory}/#{directory}"
     visited_directory = @current_directory
-    @current_directory = @current_directory + "/" + directory.name
-    elements = directory.get_elements
-    elements.each do |value|
+    @current_directory = "#{@current_directory}/#{directory.name}"
+    directory.elements.each do |value|
       value.accept(self)
     end
     @current_directory = visited_directory

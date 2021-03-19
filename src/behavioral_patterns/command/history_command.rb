@@ -25,7 +25,7 @@ class HistoryCommand < Command
   public
   def execute
     # ˅
-    for past_command in @past_commands do
+    for past_command in @past_commands
       past_command.execute
     end
     # ˄
@@ -43,7 +43,7 @@ class HistoryCommand < Command
   def undo
     # ˅
     if @past_commands.length != 0
-      @past_commands.pop()
+      @past_commands.pop
     end
     # ˄
   end

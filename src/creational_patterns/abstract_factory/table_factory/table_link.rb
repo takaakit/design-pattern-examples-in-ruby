@@ -20,7 +20,7 @@ class TableLink < Link
   public
   def to_html
     # ˅
-    return "  <td><a href=\"" + @url + "\">" + @name + "</a></td>\n"
+    return "  <td><a href=\"#{@url}\">#{@name}</a></td>\n"
     # ˄
   end
 

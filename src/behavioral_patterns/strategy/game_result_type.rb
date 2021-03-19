@@ -4,18 +4,16 @@
 
 # ˄
 
-# Node in the syntax tree.
-class Node
+module GameResultType
   # ˅
   
   # ˄
 
-  public
-  def parse(context)
-    # ˅
-    
-    # ˄
-  end
+  WIN = 0.freeze
+
+  LOSS = 1.freeze
+
+  DRAW = 2.freeze
 
   # ˅
   

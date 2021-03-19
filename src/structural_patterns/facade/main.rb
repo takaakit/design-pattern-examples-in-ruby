@@ -4,4 +4,4 @@ require_relative 'page_creator'
 
 # Create a simple homepage.
 
-PageCreator.new().create_simple_homepage("emily@example.com", "Homepage.html")
+PageCreator.instance.create_simple_homepage("emily@example.com", "Homepage.html")

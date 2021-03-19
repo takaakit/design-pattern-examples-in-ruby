@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 # ˅
+require "stringio"
 require_relative 'builder'
 
 # ˄
@@ -11,15 +12,9 @@ class PlainTextBuilder < Builder
   # ˄
 
   public
-  attr_accessor :result
-
-  public
   def initialize
 
-    # String to output
-    @result = ""
-
-    @buffer = []
+    @buffer = StringIO.new
 
     # ˅
     
@@ -30,9 +25,9 @@ class PlainTextBuilder < Builder
   public
   def create_title(title)
     # ˅
-    @buffer.push("--------------------------------\n")    # Decoration line
-    @buffer.push("[" + title + "]\n")                           # Title
-    @buffer.push("\n")                                        # Blank line
+    @buffer << "--------------------------------\n"     # Decoration line
+    @buffer << "[#{title}]\n"                           # Title
+    @buffer << "\n"                                     # Blank line
     # ˄
   end
 
@@ -40,8 +35,8 @@ class PlainTextBuilder < Builder
   public
   def create_section(section)
     # ˅
-    @buffer.push("* " + section + "\n")       # Section
-    @buffer.push("\n")                      # Blank line
+    @buffer << "* #{section}\n"                         # Section
+    @buffer << "\n"                                     # Blank line
     # ˄
   end
 
@@ -50,18 +45,22 @@ class PlainTextBuilder < Builder
   def create_items(items)
     # ˅
     for item in items
-      @buffer.push("  - " + item + "\n")      # Items
+      @buffer << "  - #{item}\n"                        # Items
     end
-    @buffer.push("\n")                      # Blank line
+    @buffer << "\n"                                     # Blank line
     # ˄
   end
 
   public
   def close
     # ˅
-    @buffer.push("--------------------------------\n")    # Decoration line
-    @result = @buffer.join
+    @buffer << "--------------------------------\n"     # Decoration line
     # ˄
+  end
+
+  public
+  def content
+    return @buffer.string
   end
 
   # ˅

@@ -22,14 +22,14 @@ class MessageDisplay
   public
   def display_with_hyphens
     # ˅
-    puts "-- " + @message + " --"
+    puts "-- #{@message} --"
     # ˄
   end
 
   public
   def display_with_brackets
     # ˅
-    puts "[[ " + @message + " ]]"
+    puts "[[ #{@message} ]]"
     # ˄
   end
 

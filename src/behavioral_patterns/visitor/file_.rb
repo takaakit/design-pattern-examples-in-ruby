@@ -13,8 +13,13 @@ class File_ < FileSystemElement
 
   public
   def initialize(name, size)
+
+    @name = name
+
+    @size = size
+
     # ˅
-    super(name, size)
+
     # ˄
   end
 
@@ -23,6 +28,16 @@ class File_ < FileSystemElement
     # ˅
     visitor.visit_file(self)
     # ˄
+  end
+
+  public
+  def name
+    return @name
+  end
+
+  public
+  def size
+    return @size
   end
 
   # ˅

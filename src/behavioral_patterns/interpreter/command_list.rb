@@ -25,24 +25,25 @@ class CommandList < Node
   def parse(context)
     # ˅
     while true
-      if context.get_token == nil
+      if context.get_token.nil?
         abort("Missing 'end'")
       elsif context.get_token == "end"
         context.slide_token("end")
         break
       else
-        command_node = Command.new()
-        command_node.parse(context)
-        @nodes.push(command_node.to_string)
+        a_node = Command.new
+        a_node.parse(context)
+        
+        @nodes.push(a_node.to_s)    # Hold the parsed node
       end
     end
     # ˄
   end
 
   public
-  def to_string
+  def to_s
     # ˅
-    return @nodes.join(", ")
+    return "[#{@nodes.join(", ")}]"
     # ˄
   end
 

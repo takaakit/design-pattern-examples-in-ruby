@@ -10,14 +10,18 @@ class Directory < FileSystemElement
 
   # ˄
 
+  attr_reader :elements
+
   public
   def initialize(name)
+
+    @name = name
 
     # Collection of elements
     @elements = []
 
     # ˅
-    super(name, 0)
+
     # ˄
   end
 
@@ -29,20 +33,28 @@ class Directory < FileSystemElement
     # ˄
   end
 
-  # Add an entry
+  # Directory name
+  public
+  def name
+    return @name
+  end
+
+  # Directory size
+  public
+  def size
+    size = 0
+    for element in @elements
+      size += element.size
+    end
+    return size
+  end
+
+  # Add an element
   public
   def add(element)
     # ˅
     @elements.push(element)
     return self
-    # ˄
-  end
-
-  # Get elements
-  public
-  def get_elements
-    # ˅
-    return @elements
     # ˄
   end
 

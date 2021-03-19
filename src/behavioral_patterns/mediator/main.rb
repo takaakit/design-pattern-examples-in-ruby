@@ -4,4 +4,4 @@ require_relative 'app_login'
 
 # Login dialog for entering a username and password.
 
-app_login = AppLogin.new()
+AppLogin.new

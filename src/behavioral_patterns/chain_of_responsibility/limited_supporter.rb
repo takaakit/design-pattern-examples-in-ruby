@@ -22,7 +22,7 @@ class LimitedSupporter < Supporter
 
   # Troubles with an ID below the limit are handled.
   protected
-  def handle(trouble)
+  def can_handle(trouble)
     # ˅
     return trouble.id <= @limit_id
     # ˄

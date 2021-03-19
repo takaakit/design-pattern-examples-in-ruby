@@ -11,15 +11,19 @@ class RealPrinter < Printer
   # ˄
 
   public
-  attr_accessor :printer_name
-
-  public
   def initialize(name)
 
     @printer_name = name
 
     # ˅
-    heavy_task("Creating an instance(" + @printer_name + ") of the Printer")
+    heavy_task("Creating an instance (#{name}) of the Printer")
+    # ˄
+  end
+
+  public
+  def printer_name(value)
+    # ˅
+    @printer_name = value
     # ˄
   end
 
@@ -27,8 +31,10 @@ class RealPrinter < Printer
   public
   def output(content)
     # ˅
-    puts "=== " + @printer_name + " ==="
+    puts "=========="
     puts content
+    puts "Printed by #{@printer_name}"
+    puts "=========="
     # ˄
   end
 

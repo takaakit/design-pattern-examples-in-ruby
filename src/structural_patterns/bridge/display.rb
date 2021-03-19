@@ -21,7 +21,7 @@ class Display
   end
 
   public
-  def display
+  def output
     # ˅
     open
     write

@@ -27,17 +27,21 @@ class Repeat < Node
   def parse(context)
     # ˅
     context.slide_token("repeat")
+    
     @number = context.get_number
-    context.next_token
-    @command_list = CommandList.new()
-    @command_list.parse(context)
+    context.slide_token(@number)
+    
+    a_command_list = CommandList.new
+    a_command_list.parse(context)
+
+    @command_list = a_command_list    # Hold the parsed command list
     # ˄
   end
 
   public
-  def to_string
+  def to_s
     # ˅
-    return "[repeat " + @number + " " + @command_list.to_string + "]"
+    return "repeat #{@number} #{@command_list}"
     # ˄
   end
 

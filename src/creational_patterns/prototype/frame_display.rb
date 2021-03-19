@@ -31,12 +31,12 @@ class FrameDisplay < Display
   def show(message)
     # ˅
     length = message.length
-    for i in 0..length + 4 - 1
+    for i in 0..length+4-1
       print @border_char
     end
     puts ""
-    puts @border_char + " " + message + " " + @border_char
-    for i in 0..length + 4 - 1
+    puts "#{@border_char} #{message} #{@border_char}"
+    for i in 0..length+4-1
       print @border_char
     end
     puts ""

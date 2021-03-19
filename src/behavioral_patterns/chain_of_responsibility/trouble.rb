@@ -24,9 +24,9 @@ class Trouble
   end
 
   public
-  def to_string
+  def to_s
     # ˅
-    return "[Trouble " + @id.to_s + "]"
+    return "[Trouble #{@id}]"
     # ˄
   end
 

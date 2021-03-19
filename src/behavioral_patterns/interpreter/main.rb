@@ -21,12 +21,12 @@ Before : "program repeat 4 forward right end end"
 After  : [program [[repeat 4 [forward, right]]]]
 =end
 
-File.open(File.dirname(__FILE__) + "/program.txt", "r") do |f|
+File.open("#{File.dirname(__FILE__)}/program.txt", "r") do |f|
   f.each_line do |line|
     line = line.strip
-    puts "TEXT > \"" + line + "\""
-    node = Program.new()
+    puts "Before parsing : #{line}"
+    node = Program.new
     node.parse(Context.new(line))
-    puts "NODE > " + node.to_string
+    puts "After parsing  : #{node}"
   end
 end

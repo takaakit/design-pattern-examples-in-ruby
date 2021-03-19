@@ -13,44 +13,42 @@ class Context
   public
   def initialize(text)
 
-    @array_text = text.split(" ")
+    @array_text = text.split
 
-    @current_text = @array_text[0]
-
-    @iter_number = 0
+    @current_index = 0
 
     @array_size = @array_text.length
 
     # ˅
-    @iter_number += 1
+    
     # ˄
   end
 
   public
   def next_token
     # ˅
-    if @iter_number < @array_size
-      @current_text = @array_text[@iter_number]
-      @iter_number += 1
+    if @current_index < @array_size
+      pre_index = @current_index
+      @current_index += 1
+      return @array_text[pre_index]
     else
-      @current_text = nil
+      return nil
     end
-    return @current_text
     # ˄
   end
 
   public
   def get_token
     # ˅
-    @current_text
+    return @array_text[@current_index]
     # ˄
   end
 
   public
   def slide_token(token)
     # ˅
-    if token != @current_text
-      abort("WARNING: " + token + " is expected but " + @current_iter.to_s + " was found.")
+    if token != @array_text[@current_index]
+      abort("WARNING: #{token} is expected but #{@array_text[@current_index]} was found.")
     end
     next_token
     # ˄
@@ -62,7 +60,7 @@ class Context
     if !get_token.match(/\D/)
       return get_token
     else
-      abort("WARNING: " + get_token)
+      abort("WARNING: #{get_token}")
     end
     # ˄
   end

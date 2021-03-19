@@ -11,22 +11,19 @@ class CreditCard < Product
   # ˄
 
   public
-  attr_accessor :owner
-
-  public
   def initialize(owner)
 
     @owner = owner
 
     # ˅
-    puts "Make " + @owner + "\'s card."
+    puts "Make #{@owner}\'s card."
     # ˄
   end
 
   public
   def use
     # ˅
-    puts "User " + @owner + "\'s card."
+    puts "User #{@owner}\'s card."
     # ˄
   end
 

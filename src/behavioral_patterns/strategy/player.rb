@@ -30,44 +30,35 @@ class Player
 
   # Calculate a hand from the strategy.
   public
-  def next_hand
+  def show_hand_signal
     # ˅
-    return @strategy.next_hand()
+    return @strategy.show_hand_signal
     # ˄
   end
 
-  # Won a game.
+  # Notify a game result.
   public
-  def won
+  def notify_game_result(result, own_hand, opponents_hand)
     # ˅
-    @strategy.learn(true)
-    @win_count += 1
-    @game_count += 1
-    # ˄
-  end
+    case result
+    when GameResultType::WIN
+      @win_count += 1
+      @game_count += 1
+    when GameResultType::LOSS
+      @loss_count += 1
+      @game_count += 1
+    when GameResultType::DRAW
+      @game_count += 1
+    end
 
-  # Lost a game.
-  public
-  def lost
-    # ˅
-    @strategy.learn(false)
-    @loss_count += 1
-    @game_count += 1
-    # ˄
-  end
-
-  # Drew a game.
-  public
-  def drew
-    # ˅
-    @game_count += 1
+    @strategy.notify_game_result(result, own_hand, opponents_hand)
     # ˄
   end
 
   public
-  def to_string
+  def to_s
     # ˅
-    return @name + " [" + @game_count.to_s + " games, " + @win_count.to_s + " won, " + @loss_count.to_s + " lost, " + (@game_count - @win_count - @loss_count).to_s + " drew]"
+    return "#{@name} [#{@game_count} games, #{@win_count} won, #{@loss_count} lost, #{(@game_count - @win_count - @loss_count)} drew]"
     # ˄
   end
 

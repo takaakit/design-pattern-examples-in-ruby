@@ -10,15 +10,13 @@ class FileSystemElement
   # ˄
 
   public
-  def initialize(name, size)
+  def name
 
-    @name = name
+  end
 
-    @size = size
+  public
+  def size
 
-    # ˅
-    
-    # ˄
   end
 
   # Print this element with the "upperPath".
@@ -30,9 +28,9 @@ class FileSystemElement
   end
 
   public
-  def to_string
+  def to_s
     # ˅
-    return @name + " (" + @size.to_s + ")"
+    return "#{name} (#{size})"
     # ˄
   end
 

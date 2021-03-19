@@ -28,9 +28,9 @@ class ColleagueRadioButton < Colleague
   def set_activation(is_enable)
     # ˅
     if is_enable
-      @radio_button.configure(state: "normal")
+      @radio_button.configure("state" => "normal")
     else
-      @radio_button.configure(state: "disabled")
+      @radio_button.configure("state" => "disabled")
     end
     # ˄
   end

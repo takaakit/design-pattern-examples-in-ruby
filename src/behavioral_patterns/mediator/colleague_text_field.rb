@@ -13,13 +13,10 @@ class ColleagueTextField < Colleague
   public
   def initialize(text_field)
 
-    # Flag indicating whether the text is empty
-    @is_empty = true
-
     @text_field = text_field
 
     # ˅
-    @text_field.bind("KeyRelease", proc{on_key_released()})
+    @text_field.bind("KeyRelease", proc{on_key_released})
     # ˄
   end
 
@@ -28,9 +25,9 @@ class ColleagueTextField < Colleague
   def set_activation(is_enable)
     # ˅
     if is_enable
-      @text_field.configure(state: "normal")
+      @text_field.configure("state" => "normal")
     else
-      @text_field.configure(state: "disabled")
+      @text_field.configure("state" => "disabled")
     end
     # ˄
   end
@@ -38,18 +35,13 @@ class ColleagueTextField < Colleague
   public
   def is_empty
     # ˅
-    return @is_empty
+    return @text_field.get.length == 0
     # ˄
   end
 
   private
   def on_key_released
     # ˅
-    if @text_field.get.length == 0
-      @is_empty = true
-    else
-      @is_empty = false
-    end
     @mediator.colleague_changed
     # ˄
   end

@@ -33,11 +33,11 @@ class AbstractDisplay
   public
   def output
     # ˅
-    open()
+    open
     for i in 0..4   # Repeat write 5 times
-      write()
+      write
     end
-    close()
+    close
     # ˄
   end
 

@@ -25,16 +25,19 @@ class Action < Node
   public
   def parse(context)
     # ˅
-    @name = context.get_token
-    context.slide_token(@name)
-    if @name != "forward" and @name != "right" and @name != "left"
-      abort @name + " is unknown"
+    current_token = context.get_token
+    if current_token != "forward" and current_token != "right" and current_token != "left"
+      abort "#{current_token} is unknown"
     end
+    
+    @name = current_token   # Hold the current token as this action name
+    
+    context.slide_token(current_token)
     # ˄
   end
 
   public
-  def to_string
+  def to_s
     # ˅
     return @name
     # ˄

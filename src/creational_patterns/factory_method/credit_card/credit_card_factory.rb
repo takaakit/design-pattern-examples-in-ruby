@@ -14,8 +14,6 @@ class CreditCardFactory < Factory
   public
   def initialize
 
-    @card_owners = []
-
     # ˅
     
     # ˄
@@ -25,20 +23,6 @@ class CreditCardFactory < Factory
   def create_product(owner)
     # ˅
     return CreditCard.new(owner)
-    # ˄
-  end
-
-  public
-  def register_product(product)
-    # ˅
-    @card_owners.push(product)
-    # ˄
-  end
-
-  public
-  def get_card_owner
-    # ˅
-    return @card_owners
     # ˄
   end
 

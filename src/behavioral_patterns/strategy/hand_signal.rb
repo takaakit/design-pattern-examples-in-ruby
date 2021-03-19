@@ -4,10 +4,18 @@
 
 # ˄
 
-class Hand
+class HandSignal
   # ˅
 
   # ˄
+
+  public
+  ROCK = 0        # Rock
+  SCISSORS = 1    # Scissors
+  PAPER = 2       # Paper
+
+  # Characters of the hands
+  $name = ['Rock', 'Scissors', 'Paper']
 
   public
   attr_accessor :value
@@ -40,7 +48,7 @@ class Hand
   end
 
   public
-  def to_string
+  def to_s
     # ˅
     return name[@value]
     # ˄
@@ -66,17 +74,8 @@ class Hand
 end
 
 # ˅
-
-# Hands of rock-scissors-paper
-ROCK = 0        # Rock
-SCISSORS = 1    # Scissors
-PAPER = 2       # Paper
-
 # Characters of the hands
-$hands = [Hand.new(ROCK), Hand.new(SCISSORS), Hand.new(PAPER)]
-
-# Characters of the hands
-$name = ['Rock', 'Scissors', 'Paper']
+$hands = [HandSignal.new(HandSignal::ROCK), HandSignal.new(HandSignal::SCISSORS), HandSignal.new(HandSignal::PAPER)]
 
 # Get an instance of the hand
 def get_hand(hand_value)

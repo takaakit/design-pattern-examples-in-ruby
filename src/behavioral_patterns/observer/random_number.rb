@@ -21,10 +21,10 @@ class RandomNumber < Number
   public
   def generate
     # ˅
-    random = Random.new()
-    for i in 0..20
+    random = Random.new
+    for i in 0..19
       @value = random.rand(50)
-      notify_observers()
+      notify_observers
     end
     # ˄
   end

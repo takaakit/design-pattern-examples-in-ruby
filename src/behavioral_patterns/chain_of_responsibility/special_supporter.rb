@@ -22,7 +22,7 @@ class SpecialSupporter < Supporter
 
   # Troubles with the specific ID are handled.
   protected
-  def handle(trouble)
+  def can_handle(trouble)
     # ˅
     return trouble.id == @target_id
     # ˄

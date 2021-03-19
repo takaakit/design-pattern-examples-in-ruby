@@ -19,7 +19,7 @@ class LazySupporter < Supporter
 
   # No troubles are handled.
   protected
-  def handle(trouble)
+  def can_handle(trouble)
     # ˅
     return false
     # ˄

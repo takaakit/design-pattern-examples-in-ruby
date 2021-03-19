@@ -34,7 +34,7 @@ class TextDisplayImpl < DisplayImpl
   public
   def impl_write
     # ˅
-    puts ":" + @text + ":"    # Enclose a text with ":" and display it.
+    puts ":#{@text}:"    # Enclose a text with ":" and display it.
     # ˄
   end
 

@@ -6,16 +6,17 @@ require_relative 'frame_display'
 
 # Display a character string enclosed with a frame line, or drawn with an underline.
 
-# Create a manager
-manager = Manager.new()
+manager = Manager.new
+
+# Register instances of the "Display" subclass
 emphasis_underline = UnderlineDisplay.new("~")
-highlight_frame = FrameDisplay.new("+")
-warning_frame = FrameDisplay.new("#")
 manager.register_display("emphasis", emphasis_underline)
+highlight_frame = FrameDisplay.new("+")
 manager.register_display("highlight", highlight_frame)
+warning_frame = FrameDisplay.new("#")
 manager.register_display("warning", warning_frame)
 
-# Create displays
+# Require to display
 display_1 = manager.get_display("emphasis")
 display_1.show("Nice to meet you.")
 display_2 = manager.get_display("highlight")

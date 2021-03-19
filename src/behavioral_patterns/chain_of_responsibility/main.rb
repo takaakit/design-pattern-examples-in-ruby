@@ -10,15 +10,13 @@ require_relative 'trouble'
 
 emily = LazySupporter.new("Emily")
 william = MoodySupporter.new("William")
-amelia = SpecialSupporter.new("Amelia", 153)
-michael = LimitedSupporter.new("Michael", 340)
-joseph = LimitedSupporter.new("Joseph", 250)
-lily = LimitedSupporter.new("Lily", 350)
+amelia = SpecialSupporter.new("Amelia", 6)
+joseph = LimitedSupporter.new("Joseph", 5)
 
 # Make a chain.
-emily.set_next(william).set_next(amelia).set_next(michael).set_next(joseph).set_next(lily)
+emily.set_next(william).set_next(amelia).set_next(joseph)
 
 # Various troubles occurred.
-0.step(500, 17) do |n|
-  emily.support(Trouble.new(n))
+for i in 0..9
+  emily.support(Trouble.new(i))
 end

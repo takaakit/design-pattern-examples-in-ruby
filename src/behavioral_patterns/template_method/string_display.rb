@@ -26,7 +26,7 @@ class StringDisplay < AbstractDisplay
   public
   def open
     # ˅
-    write_line()     # Write a line
+    write_line     # Write a line
     # ˄
   end
 
@@ -40,7 +40,7 @@ class StringDisplay < AbstractDisplay
   public
   def close
     # ˅
-    write_line()     # Write a line
+    write_line     # Write a line
     # ˄
   end
 

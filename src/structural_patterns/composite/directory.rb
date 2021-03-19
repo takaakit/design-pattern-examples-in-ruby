@@ -13,20 +13,36 @@ class Directory < FileSystemElement
   public
   def initialize(name)
 
+    @name = name
+
     @elements = []
 
     # ˅
-    super(name, 0)
+
     # ˄
+  end
+
+  public
+  def name
+    return @name
+  end
+
+  public
+  def size
+    size = 0
+    for element in @elements
+      size += element.size
+    end
+    return size
   end
 
   # Print this element with the "upperPath".
   public
   def print(upper_path)
     # ˅
-    puts upper_path + "/" + to_string
+    puts "#{upper_path}/#{self}"
     for element in @elements
-      element.print(upper_path + "/" + @name)
+      element.print("#{upper_path}/#{@name}")
     end
     # ˄
   end

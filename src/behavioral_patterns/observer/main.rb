@@ -6,9 +6,7 @@ require_relative 'bar_chart_observer'
 
 # Observers observe objects generating a numerical value and display the value.
 
-number = RandomNumber.new()
-digit_observer = DigitObserver.new()
-bar_chart_observer = BarChartObserver.new()
-number.add_observer(digit_observer)
-number.add_observer(bar_chart_observer)
-number.generate()
+number = RandomNumber.new
+number.add_observer(DigitObserver.new)
+number.add_observer(BarChartObserver.new)
+number.generate

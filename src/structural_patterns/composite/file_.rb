@@ -13,16 +13,31 @@ class File_ < FileSystemElement
 
   public
   def initialize(name, size)
+
+    @name = name
+
+    @size = size
+
     # ˅
-    super(name, size)
+
     # ˄
+  end
+
+  public
+  def name
+    return @name
+  end
+
+  public
+  def size
+    return @size
   end
 
   # Print this element with the "upperPath".
   public
   def print(upper_path)
     # ˅
-    puts upper_path + "/" + to_string
+    puts "#{upper_path}/#{self}"
     # ˄
   end
 

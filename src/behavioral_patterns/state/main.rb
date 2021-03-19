@@ -4,4 +4,4 @@ require_relative 'app_safe'
 
 # Safe security system that the security status changes with time.
 
-app_safe = AppSafe.new()
+AppSafe.new

@@ -12,14 +12,9 @@ class PrinterProxy < Printer
   # ˄
 
   public
-  attr_accessor :printer_name
-
-  public
   def initialize(name)
 
     @current_name = name
-
-    @printer_name = nil
 
     # A printer that actually prints
     @real = nil
@@ -30,39 +25,29 @@ class PrinterProxy < Printer
   end
 
   public
-  def get_printer_name
+  def printer_name
     # ˅
     return @current_name
     # ˄
   end
 
   public
-  def set_printer_name(value)
+  def printer_name=(value)
     # ˅
-    if @real != nil
+    if @real.nil? == false
       @real.printer_name = value
-      @current_name = value
     end
+    @current_name = value
     # ˄
   end
 
   public
   def output(content)
     # ˅
-    create_printer
-    if @real != nil
-      @real.output(content)
-    end
-    # ˄
-  end
-
-  # Create an actual printer
-  private
-  def create_printer
-    # ˅
     if @real.nil?
       @real = RealPrinter.new(@current_name)
     end
+    @real.output(content)
     # ˄
   end
 

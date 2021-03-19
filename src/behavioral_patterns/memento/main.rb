@@ -10,26 +10,25 @@ Dice game collecting fruits.
 * The game is over if the gamer's money runs out.
 =end
 
-gamer = Gamer.new(100)
-memento = gamer.create_memento()
+gamer = Gamer.new(100)    # The initial money is 100
+memento = gamer.create_memento  # Save the initial state
 
-for i in 0..99
-  puts "==== " + i.to_s
-  puts "Current state: " + gamer.to_string()
+for i in 0..9
+  puts "==== Turn #{i + 1}"     # Display count
 
-  gamer.play()
+  gamer.play                    # Play a game
 
-  puts "Gamer's money is " + gamer.money.to_s + "."
-
+  # Determine the behavior of the Memento
   if gamer.money > memento.money
-    puts "(Save the current state because money has increased.)"
-    memento = gamer.create_memento()
+    puts "(Gamers' money is the highest ever, so record the current state.)"
+    memento = gamer.create_memento
   elsif gamer.money < memento.money / 2
-    puts "(Go back to the previous state because money has decreased.)"
-    gamer.restore_memento(memento)
+    puts "(Gamer's money is less than half of the highest amount, so return to the recorded state.)"
+    gamer.set_memento(memento)
+    puts "Gamer's money returns to #{gamer.money}."
   end
 
-  sleep(1)
-
   puts ""
+
+  sleep(1)
 end

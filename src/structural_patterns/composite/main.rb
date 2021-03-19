@@ -6,29 +6,27 @@ require_relative 'file_'
 # Represents a file system composed of files and directories.
 
 puts "Create a file system..."
-root_dir = Directory.new("root")
-home_dir = Directory.new("home")
+
 bin_dir = Directory.new("bin")
-etc_dir = Directory.new("etc")
+ls_file = File_.new("ls", 20)
+bin_dir.add(ls_file)
+mkdir_file = File_.new("mkdir", 40)
+bin_dir.add(mkdir_file)
+
 emily_dir = Directory.new("emily")
+homework_file = File_.new("homework.doc", 60)
+emily_dir.add(homework_file)
+
 james_dir = Directory.new("james")
-olivia_dir = Directory.new("olivia")
+app_file = File_.new("app.exe", 80)
+james_dir.add(app_file)
 
-root_dir.add(home_dir)
-root_dir.add(bin_dir)
-root_dir.add(etc_dir)
-
-bin_dir.add(File_.new("ls", 100))
-bin_dir.add(File_.new("mkdir", 50))
+home_dir = Directory.new("home")
 home_dir.add(emily_dir)
 home_dir.add(james_dir)
-home_dir.add(olivia_dir)
 
-emily_dir.add(File_.new("homework.doc", 40))
-james_dir.add(File_.new("homework.doc", 50))
-james_dir.add(File_.new("app.exe", 60))
-olivia_dir.add(File_.new("homework.doc", 70))
-olivia_dir.add(File_.new("app.exe", 80))
-olivia_dir.add(File_.new("tips.html", 90))
+root_dir = Directory.new("root")
+root_dir.add(home_dir)
+root_dir.add(bin_dir)
 
 root_dir.print("")

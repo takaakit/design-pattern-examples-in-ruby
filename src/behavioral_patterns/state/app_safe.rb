@@ -17,7 +17,7 @@ class AppSafe < Context
   def initialize
 
     # Current state
-    @state = DaytimeState.new()
+    @state = DaytimeState.instance
 
     @root = TkRoot.new
 
@@ -38,32 +38,33 @@ class AppSafe < Context
     @text_time = text_time
 
     message_frame = TkFrame.new(@root)
-    message_frame.pack()
+    message_frame.pack
 
-    text_message = TkText.new(message_frame, "height" => 8)
-    text_message.grid("sticky" => "news")
+    scrollbar = TkScrollbar.new(message_frame).pack('fill' => 'y', 'side' => 'right')
+    text_message = TkText.new(message_frame, "width" => 60, "height" => 20).pack('side' => 'right')
+    text_message.yscrollbar(scrollbar)
     @text_message = text_message
 
     button_frame = TkFrame.new(@root)
-    button_frame.pack()
+    button_frame.pack
 
-    button_use = TkButton.new(button_frame, "text" => "Use a safe")
-    button_use.bind("Button-1", proc{use_safe()})         # Safe use button pressed
+    button_use = TkButton.new(button_frame, "text" => "Use")
+    button_use.bind("Button-1", proc{use_safe})         # Use button pressed
     button_use.grid("row" => 0, "column" => 0)
 
-    button_alarm = TkButton.new(button_frame, "text" => "Sound an emergency bell")
-    button_alarm.bind("Button-1", proc{sound_bell()})     # Emergency bell button pressed
+    button_alarm = TkButton.new(button_frame, "text" => "Alarm")
+    button_alarm.bind("Button-1", proc{sound_bell})     # Alarm button pressed
     button_alarm.grid("row" => 0, "column" => 1)
 
-    button_phone = TkButton.new(button_frame, "text" => "Make a call")
-    button_phone.bind("Button-1", proc{call()})           # Normal call button pressed
+    button_phone = TkButton.new(button_frame, "text" => "Phone")
+    button_phone.bind("Button-1", proc{call})           # Phone button pressed
     button_phone.grid("row" => 0, "column" => 2)
 
     button_exit = TkButton.new(button_frame, "text" => "Exit")
-    button_exit.bind("Button-1", proc{exit()})            # Exit button pressed
+    button_exit.bind("Button-1", proc{exit})            # Exit button pressed
     button_exit.grid("row" => 0, "column" => 3)
 
-    roop_thread = Thread.start {
+    Thread.start {
       count_time
     }
 
@@ -76,10 +77,10 @@ class AppSafe < Context
   def set_time(hour)
     # ˅
     clock_string = "Current Time : "
-    if hour < 10 then
-      clock_string += "0" + hour.to_s + ":00"
+    if hour < 10
+      clock_string += "0#{hour}:00"
     else
-      clock_string += hour.to_s + ":00"
+      clock_string += "#{hour}:00"
     end
     puts clock_string
     @text_time.delete(0, "end")
@@ -92,7 +93,7 @@ class AppSafe < Context
   public
   def change_state(state)
     # ˅
-    puts "The state changed from " + @state.to_string + " to " + state.to_string
+    puts "The state changed from #{@state} to #{state}"
     @state = state
     # ˄
   end
@@ -101,7 +102,8 @@ class AppSafe < Context
   public
   def call_security_guards_room(msg)
     # ˅
-    @text_message.insert("end", "call! " + msg + "\n")
+    @text_message.insert("end", "call! #{msg}\n")
+    @text_message.yview_moveto(1)     # Scroll to the bottom
     # ˄
   end
 
@@ -109,7 +111,8 @@ class AppSafe < Context
   public
   def record_security_log(msg)
     # ˅
-    @text_message.insert("end", "record ... " + msg + "\n")
+    @text_message.insert("end", "record ... #{msg}\n")
+    @text_message.yview_moveto(1)     # Scroll to the bottom
     # ˄
   end
 
@@ -145,7 +148,7 @@ class AppSafe < Context
   def count_time
     # ˅
     loop do
-      for hour in 0..23 do
+      for hour in 0..23
         set_time(hour)    # Set the time
         sleep(1)
       end

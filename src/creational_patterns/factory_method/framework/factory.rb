@@ -13,21 +13,12 @@ class Factory
   public
   def create(owner)
     # ˅
-    product = create_product(owner)
-    register_product(product)
-    return product
+    return create_product(owner)
     # ˄
   end
 
   protected
   def create_product(owner)
-    # ˅
-    
-    # ˄
-  end
-
-  protected
-  def register_product(product)
     # ˅
     
     # ˄

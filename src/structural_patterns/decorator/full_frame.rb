@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 # ˅
+require 'stringio'
 require_relative 'frame'
 
 # ˄
@@ -36,13 +37,13 @@ class FullFrame < Frame
     # ˅
     if row == 0
       # Upper frame
-      return "+" + create_line("-", @display.get_columns) + "+"
+      return "+#{create_line("-", @display.get_columns)}+"
     elsif row == @display.get_rows + 1
       # Bottom frame
-      return "+" + create_line("-", @display.get_columns) + "+"
+      return "+#{create_line("-", @display.get_columns)}+"
     else
       # Other
-      return "|" + @display.get_line_text(row - 1) + "|"
+      return "|#{@display.get_line_text(row - 1)}|"
     end
     # ˄
   end
@@ -50,11 +51,11 @@ class FullFrame < Frame
   private
   def create_line(ch, size)
     # ˅
-    buf = []
+    buf = StringIO.new
     for i in 0..size-1
-      buf.push(ch)
+      buf << ch
     end
-    return buf.join
+    return buf.string
     # ˄
   end
 

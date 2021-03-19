@@ -26,18 +26,21 @@ class Command < Node
   def parse(context)
     # ˅
     if context.get_token == "repeat"
-      @node = Repeat.new()
+      a_node = Repeat.new
+      a_node.parse(context)
     else
-      @node = Action.new()
+      a_node = Action.new
+      a_node.parse(context)
     end
-    @node.parse(context)
+    
+    @node = a_node    # Hold the parsed node
     # ˄
   end
 
   public
-  def to_string
+  def to_s
     # ˅
-    return @node.to_string
+    return "#{@node}"
     # ˄
   end
 

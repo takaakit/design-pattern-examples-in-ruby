@@ -4,4 +4,4 @@ require_relative 'app_main'
 
 # Simple drawing application.
 
-app_main = AppMain.new()
+AppMain.new

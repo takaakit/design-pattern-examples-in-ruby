@@ -31,9 +31,9 @@ class UnderlineDisplay < Display
   def show(message)
     # ˅
     length = message.length
-    puts "\"" + message + "\""
+    puts "\"#{message}\""
     print " "
-    for i in 0..length - 1
+    for i in 0..length-1
       print @underline_char
     end
     puts ""

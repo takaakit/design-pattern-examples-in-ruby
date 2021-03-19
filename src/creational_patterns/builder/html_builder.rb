@@ -11,13 +11,13 @@ class HTMLBuilder < Builder
   # ˄
 
   public
-  attr_accessor :result
+  attr_accessor :file_name
 
   public
   def initialize
 
     # File name to create
-    @result = nil
+    @file_name = nil
 
     @writer = nil
 
@@ -30,10 +30,10 @@ class HTMLBuilder < Builder
   public
   def create_title(title)
     # ˅
-    @result = title + ".html"         # Set a title as a file name
-    @writer = File.open(@result, "w")
-    @writer.write("<html><head><title>" + title + "</title></head><body>")
-    @writer.write("<h1>" + title + "</h1>")
+    @file_name = "#{title}.html"         # Set a title as a file name
+    @writer = File.open(@file_name, "w")
+    @writer.write("<html><head><title>#{title}</title></head><body>")
+    @writer.write("<h1>#{title}</h1>")
     # ˄
   end
 
@@ -41,7 +41,7 @@ class HTMLBuilder < Builder
   public
   def create_section(section)
     # ˅
-    @writer.write("<p>" + section + "</p>")   # Write a section
+    @writer.write("<p>#{section}</p>")   # Write a section
     # ˄
   end
 
@@ -51,7 +51,7 @@ class HTMLBuilder < Builder
     # ˅
     @writer.write("<ul>")   # Write items
     for item in items
-      @writer.write("<li>" + item + "</li>")
+      @writer.write("<li>#{item}</li>")
     end
     @writer.write("</ul>")
     # ˄

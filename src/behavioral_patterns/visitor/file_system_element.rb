@@ -11,27 +11,19 @@ class FileSystemElement < Element
   # ˄
 
   public
-  attr_accessor :name
+  def name
 
-  public
-  attr_accessor :size
-
-  public
-  def initialize(name, size)
-
-    @name = name
-
-    @size = size
-
-    # ˅
-
-    # ˄
   end
 
   public
-  def to_string
+  def size
+
+  end
+
+  public
+  def to_s
     # ˅
-    return @name + " (" + @size.to_s + ")"
+    return "#{name} (#{size})"
     # ˄
   end
 

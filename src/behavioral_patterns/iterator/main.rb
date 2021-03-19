@@ -13,8 +13,8 @@ book_shelf.add(Book.new("Software Systems Architecture: Working With Stakeholder
 book_shelf.add(Book.new("A Practical Guide to SysML: The Systems Modeling Language"))
 book_shelf.add(Book.new("A Pattern Language: Towns, Buildings, Construction"))
 
-it = book_shelf.iterator()
-while it.has_next()
-  book = it.next()
+it = book_shelf.iterator
+while it.has_next
+  book = it.next
   puts book.title
 end

@@ -13,10 +13,10 @@ class PaintingCanvas < PaintingTarget
   public
   def initialize(canvas)
 
-    @painting_color = "blue"
+    @painting_color = "lightgreen"
 
     # Radius of the painting point
-    @point_radius = 6.0
+    @point_radius = 10.0
 
     @canvas = canvas
 
@@ -28,14 +28,14 @@ class PaintingCanvas < PaintingTarget
   public
   def paint(painting_pos_x, painting_pos_y)
     # ˅
-    TkcOval.new(@canvas,
+    t = TkcOval.new(@canvas,
                 painting_pos_x - @point_radius,
                 painting_pos_y - @point_radius,
                 painting_pos_x + @point_radius,
-                painting_pos_y + @point_radius,
-                "fill" => @painting_color,
-                "width" => 0
+                painting_pos_y + @point_radius
     )
+    t.fill = @painting_color
+    t.width = 0
     # ˄
   end
 
