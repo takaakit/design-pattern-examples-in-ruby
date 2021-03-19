@@ -5,8 +5,9 @@ require 'singleton'
 # ˄
 
 class DataLibrary
-  # ˅
   include Singleton
+  # ˅
+
   # ˄
 
   # Read a data library file.

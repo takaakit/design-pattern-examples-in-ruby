@@ -10,23 +10,19 @@ class HandSignal
   # ˄
 
   # Rock
-  public
   ROCK = 0
 
   # Scissors
-  public
   SCISSORS = 1
 
   # Paper
-  public
   PAPER = 2
+
+  # Characters of the hands
+  @@name = ['Rock', 'Scissors', 'Paper']
 
   public
   attr_reader :value
-
-  # Characters of the hands
-  private
-  $name = ['Rock', 'Scissors', 'Paper']
 
   public
   def initialize(value)
@@ -58,7 +54,7 @@ class HandSignal
   public
   def to_s
     # ˅
-    return name[@value]
+    return @@name[@value]
     # ˄
   end
 

@@ -9,8 +9,9 @@ require_relative 'html_writer'
 # ˄
 
 class PageCreator
-  # ˅
   include Singleton
+  # ˅
+
   # ˄
 
   public

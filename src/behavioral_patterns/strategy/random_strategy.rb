@@ -4,19 +4,19 @@
 require_relative 'hand_signal'
 require_relative 'strategy'
 
+
 # ˄
 
 # Calculate a hand from the previous hand stochastically.
 class RandomStrategy < Strategy
   # ˅
-
+  
   # ˄
 
   public
-  def initialize()
-
+  def initialize
     # ˅
-
+    
     # ˄
   end
 
@@ -24,7 +24,6 @@ class RandomStrategy < Strategy
   def show_hand_signal
     # ˅
     return get_hand(Random.new.rand(3))
-
     # ˄
   end
 
@@ -36,7 +35,7 @@ class RandomStrategy < Strategy
   end
 
   # ˅
-
+  
   # ˄
 end
 

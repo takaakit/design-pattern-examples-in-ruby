@@ -4,21 +4,22 @@
 require_relative 'hand_signal'
 require_relative 'strategy'
 
+
 # ˄
 
 # When winning a game, show the same hand at the next time.
 class MirrorStrategy < Strategy
   # ˅
-
+  
   # ˄
 
   public
-  def initialize()
+  def initialize
 
     @pre_opponents_hand = get_hand(HandSignal::ROCK)
 
     # ˅
-
+    
     # ˄
   end
 
@@ -37,7 +38,7 @@ class MirrorStrategy < Strategy
   end
 
   # ˅
-
+  
   # ˄
 end
 
