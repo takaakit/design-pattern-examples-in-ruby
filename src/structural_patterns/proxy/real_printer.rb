@@ -21,7 +21,7 @@ class RealPrinter < Printer
   end
 
   public
-  def printer_name(value)
+  def printer_name=(value)
     # ˅
     @printer_name = value
     # ˄

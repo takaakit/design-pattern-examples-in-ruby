@@ -7,8 +7,9 @@ require_relative 'large_size_char'
 # ˄
 
 class LargeSizeCharFactory
-  # ˅
   include Singleton
+  # ˅
+  
   # ˄
 
   public

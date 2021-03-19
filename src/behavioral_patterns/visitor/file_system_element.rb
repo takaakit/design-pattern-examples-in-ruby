@@ -12,12 +12,16 @@ class FileSystemElement < Element
 
   public
   def name
-
+    # ˅
+    
+    # ˄
   end
 
   public
   def size
-
+    # ˅
+    
+    # ˄
   end
 
   public

@@ -3,6 +3,7 @@
 # ˅
 require_relative '../framework/product'
 
+
 # ˄
 
 class CreditCard < Product

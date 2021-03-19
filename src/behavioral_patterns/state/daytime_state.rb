@@ -8,8 +8,9 @@ require_relative 'night_state'
 # ˄
 
 class DaytimeState < State
-  # ˅
   include Singleton
+  # ˅
+
   # ˄
 
   # Set time

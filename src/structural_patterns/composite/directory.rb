@@ -24,16 +24,20 @@ class Directory < FileSystemElement
 
   public
   def name
+    # ˅
     return @name
+    # ˄
   end
 
   public
   def size
+    # ˅
     size = 0
     for element in @elements
       size += element.size
     end
     return size
+    # ˄
   end
 
   # Print this element with the "upperPath".

@@ -130,12 +130,14 @@ class AppLogin < Mediator
   # Set mediators
   private
   def set_mediators
+    # ˅
     @radio_login.mediator = self
     @radio_guest.mediator = self
     @text_username.mediator = self
     @text_password.mediator = self
     @button_ok.mediator = self
     @button_cancel.mediator = self
+    # ˄
   end
 
   # ˅

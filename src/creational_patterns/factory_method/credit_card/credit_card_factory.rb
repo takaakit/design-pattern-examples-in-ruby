@@ -4,6 +4,7 @@
 require_relative '../framework/factory'
 require_relative 'credit_card'
 
+
 # ˄
 
 class CreditCardFactory < Factory
@@ -13,7 +14,6 @@ class CreditCardFactory < Factory
 
   public
   def initialize
-
     # ˅
     
     # ˄

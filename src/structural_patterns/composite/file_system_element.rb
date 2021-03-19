@@ -11,12 +11,16 @@ class FileSystemElement
 
   public
   def name
-
+    # ˅
+    
+    # ˄
   end
 
   public
   def size
-
+    # ˅
+    
+    # ˄
   end
 
   # Print this element with the "upperPath".

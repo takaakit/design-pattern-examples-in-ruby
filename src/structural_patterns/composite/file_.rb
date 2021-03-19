@@ -25,12 +25,16 @@ class File_ < FileSystemElement
 
   public
   def name
+    # ˅
     return @name
+    # ˄
   end
 
   public
   def size
+    # ˅
     return @size
+    # ˄
   end
 
   # Print this element with the "upperPath".

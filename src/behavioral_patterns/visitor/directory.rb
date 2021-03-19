@@ -10,6 +10,7 @@ class Directory < FileSystemElement
 
   # ˄
 
+  public
   attr_reader :elements
 
   public
@@ -36,17 +37,21 @@ class Directory < FileSystemElement
   # Directory name
   public
   def name
+    # ˅
     return @name
+    # ˄
   end
 
   # Directory size
   public
   def size
+    # ˅
     size = 0
     for element in @elements
       size += element.size
     end
     return size
+    # ˄
   end
 
   # Add an element
@@ -59,7 +64,7 @@ class Directory < FileSystemElement
   end
 
   # ˅
-
+  
   # ˄
 end
 

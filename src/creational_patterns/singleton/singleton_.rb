@@ -6,8 +6,9 @@ require 'singleton'
 # ˄
 
 class Singleton_
-  # ˅
   include Singleton
+  # ˅
+  
   # ˄
 
   # ˅

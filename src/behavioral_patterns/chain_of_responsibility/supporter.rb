@@ -50,7 +50,7 @@ class Supporter
   protected
   def can_handle(trouble)
     # ˅
-
+    
     # ˄
   end
 
