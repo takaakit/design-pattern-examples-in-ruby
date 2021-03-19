@@ -37,16 +37,37 @@ class AppLogin < Mediator
     @root.title = "Mediator Example"
 
     create_colleagues
+    set_mediators
+
     colleague_changed
 
-    @radio_login.mediator = self
-    @radio_guest.mediator = self
-    @text_username.mediator = self
-    @text_password.mediator = self
-    @button_ok.mediator = self
-    @button_cancel.mediator = self
-
     @root.mainloop
+    # ˄
+  end
+
+  # Change enable/disable of the Colleagues when notified from the Mediators.
+  public
+  def colleague_changed
+    # ˅
+    if @button_ok.is_pressed or @button_cancel.is_pressed
+      @root.destroy
+    else
+      if @radio_guest.is_selected     # Guest mode
+        @text_username.set_activation(false)
+        @text_password.set_activation(false)
+        @button_ok.set_activation(true)
+      else
+        @text_username.set_activation(true)
+        @text_password.set_activation(true)
+
+        # Judge whether the changed Colleage is enabled or disabled
+        if @text_username.is_empty == false and @text_password.is_empty == false
+          @button_ok.set_activation(true)
+        else
+          @button_ok.set_activation(false)
+        end
+      end
+    end
     # ˄
   end
 
@@ -106,30 +127,15 @@ class AppLogin < Mediator
     # ˄
   end
 
-  # Change enable/disable of the Colleagues when notified from the Mediators.
-  public
-  def colleague_changed
-    # ˅
-    if @button_ok.is_pressed or @button_cancel.is_pressed
-      @root.destroy
-    else
-      if @radio_guest.is_selected     # Guest mode
-        @text_username.set_activation(false)
-        @text_password.set_activation(false)
-        @button_ok.set_activation(true)
-      else
-        @text_username.set_activation(true)
-        @text_password.set_activation(true)
-
-        # Judge whether the changed Colleage is enabled or disabled
-        if @text_username.is_empty == false and @text_password.is_empty == false
-          @button_ok.set_activation(true)
-        else
-          @button_ok.set_activation(false)
-        end
-      end
-    end
-    # ˄
+  # Set mediators
+  private
+  def set_mediators
+    @radio_login.mediator = self
+    @radio_guest.mediator = self
+    @text_username.mediator = self
+    @text_password.mediator = self
+    @button_ok.mediator = self
+    @button_cancel.mediator = self
   end
 
   # ˅

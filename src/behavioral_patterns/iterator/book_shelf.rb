@@ -12,7 +12,7 @@ class BookShelf < Aggregate
   # ˄
 
   public
-  attr_accessor :number_of_books
+  attr_reader :number_of_books
 
   public
   def initialize(max_size)

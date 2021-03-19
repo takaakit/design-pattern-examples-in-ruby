@@ -4,7 +4,9 @@ require_relative 'message_display'
 require_relative 'side_frame'
 require_relative 'full_frame'
 
-# Display a character string with a decorative frame.
+=begin
+Display a string with decorative frames. The frames can be combined arbitrarily.
+=end
 
 display_a = MessageDisplay.new("Nice to meet you.")
 display_a.show

@@ -5,7 +5,7 @@ require_relative 'observer'
 
 # ˄
 
-# Display values with digits.
+# Display values as a number.
 class DigitObserver < Observer
   # ˅
 

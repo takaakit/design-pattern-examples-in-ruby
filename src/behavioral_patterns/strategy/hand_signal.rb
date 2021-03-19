@@ -9,16 +9,24 @@ class HandSignal
 
   # ˄
 
+  # Rock
   public
-  ROCK = 0        # Rock
-  SCISSORS = 1    # Scissors
-  PAPER = 2       # Paper
+  ROCK = 0
+
+  # Scissors
+  public
+  SCISSORS = 1
+
+  # Paper
+  public
+  PAPER = 2
+
+  public
+  attr_reader :value
 
   # Characters of the hands
+  private
   $name = ['Rock', 'Scissors', 'Paper']
-
-  public
-  attr_accessor :value
 
   public
   def initialize(value)

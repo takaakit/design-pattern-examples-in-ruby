@@ -10,7 +10,7 @@ class Memento
   # ˄
 
   public
-  attr_accessor :money
+  attr_reader :money
 
   public
   def initialize(money)

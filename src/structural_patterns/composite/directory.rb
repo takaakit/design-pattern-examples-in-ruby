@@ -47,7 +47,7 @@ class Directory < FileSystemElement
     # ˄
   end
 
-  # Add a element
+  # Add an element
   public
   def add(element)
     # ˅

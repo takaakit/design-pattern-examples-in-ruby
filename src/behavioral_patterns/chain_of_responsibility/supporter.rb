@@ -47,13 +47,6 @@ class Supporter
     # ˄
   end
 
-  public
-  def to_string
-    # ˅
-    return "[#{@name}]"
-    # ˄
-  end
-
   protected
   def can_handle(trouble)
     # ˅

@@ -28,7 +28,7 @@ class Player
     # ˄
   end
 
-  # Calculate a hand from the strategy.
+  # Show a hand signal from the strategy.
   public
   def show_hand_signal
     # ˅

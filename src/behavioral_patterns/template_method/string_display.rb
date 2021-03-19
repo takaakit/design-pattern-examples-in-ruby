@@ -11,12 +11,12 @@ class StringDisplay < AbstractDisplay
   # ˄
 
   public
-  def initialize(string)
+  def initialize(string_value)
 
-    @string = string
+    @string_value = string_value
 
     # String width
-    @width = string.length
+    @width = string_value.length
 
     # ˅
     
@@ -33,7 +33,7 @@ class StringDisplay < AbstractDisplay
   public
   def write
     # ˅
-    puts "|" + @string + "|"  # Display the character with "|"
+    puts "|" + @string_value + "|"  # Display the character with "|"
     # ˄
   end
 

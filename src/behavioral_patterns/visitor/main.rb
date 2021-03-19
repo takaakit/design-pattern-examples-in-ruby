@@ -4,7 +4,9 @@ require_relative 'directory'
 require_relative 'file_'
 require_relative 'list_visitor'
 
-# Visitors visit a file system composed of files and directories, and displays a list of files/directories.
+=begin
+Visitor visits the file system composed of files and directories, and displays a list of files/directories.
+=end
 
 puts "Create a file system..."
 

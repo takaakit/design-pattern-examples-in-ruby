@@ -21,6 +21,7 @@ class SideFrame < Frame
     # ˄
   end
 
+  # Number of characters added left and right decoration characters
   public
   def get_columns
     # ˅
@@ -28,6 +29,7 @@ class SideFrame < Frame
     # ˄
   end
 
+  # Number of lines
   public
   def get_rows
     # ˅

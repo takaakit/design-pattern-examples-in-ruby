@@ -11,7 +11,7 @@ class Gamer
   # ˄
 
   public
-  attr_accessor :money
+  attr_reader :money
 
   public
   def initialize(money)
@@ -19,12 +19,14 @@ class Gamer
     # Gamer's money
     @money = money
 
+    # Random number generator
+    @random = Random.new
+
     # ˅
 
     # ˄
   end
 
-  # Get current status
   public
   def create_memento
     # ˅
@@ -32,7 +34,6 @@ class Gamer
     # ˄
   end
 
-  # Undo status
   public
   def set_memento(memento)
     # ˅
@@ -44,8 +45,7 @@ class Gamer
   public
   def play
     # ˅
-    random = Random.new
-    dice = random.rand(1..6)  # Shake a dice
+    dice = @random.rand(1..6)  # Shake a dice
     puts "The number of dice is #{dice}."
 
     pre_money = @money
@@ -60,8 +60,7 @@ class Gamer
       puts "Gamer's money doubles: #{pre_money} -> #{@money}"
     else
       # Other...Exit
-      puts "Unexpected value."
-      exit 1
+      abort("Unexpected value.")
     end
     # ˄
   end

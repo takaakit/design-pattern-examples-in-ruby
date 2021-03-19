@@ -3,7 +3,10 @@
 require_relative 'directory'
 require_relative 'file_'
 
-# Represents a file system composed of files and directories.
+=begin
+Represents a file system composed of files and directories. FileSystemElement makes
+it possible to treat File and Directory uniformly.
+=end
 
 puts "Create a file system..."
 

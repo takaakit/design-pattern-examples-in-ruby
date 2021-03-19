@@ -5,7 +5,10 @@ require_relative 'directory'
 require_relative 'plain_text_builder'
 require_relative 'html_builder'
 
-# Create documents in HTML format and text format.
+=begin
+Create documents in HTML format and text format. It is possible to create different documents
+in the same construction process.
+=end
 
 puts "Please enter \"plain\" or \"html\":"
 input_value = gets.chomp
@@ -24,6 +27,5 @@ elsif input_value == "html"
   puts "#{file_name} has been created."
   puts "Output File: #{Pathname.new(Dir.pwd).join(file_name)}"
 else
-  puts "The value is not \"plain\" or \"html\"."
-  exit(1)
+  abort("The value is not \"plain\" or \"html\".")
 end

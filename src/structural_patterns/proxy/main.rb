@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 require_relative 'printer_proxy'
 
-# At the time of printing, create an instance of the printer for the first time.
-# In order to spend time creating a printer, call a heavy task when creating a printer instance.
+=begin
+Print on a named printer. Setting and changing the printer name is done by Proxy (PrinterProxy).
+At the time of printing, create an instance of the RealSubject (RealPrinter) for the first time.
+=end
 
 p = PrinterProxy.new("PRINTER-A")
 puts "'The current printer is #{p.printer_name}."

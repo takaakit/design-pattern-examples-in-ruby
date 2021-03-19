@@ -18,6 +18,7 @@ class FullFrame < Frame
     # ˄
   end
 
+  # Number of characters added left and right decoration characters
   public
   def get_columns
     # ˅
@@ -25,6 +26,7 @@ class FullFrame < Frame
     # ˄
   end
 
+  # Number of rows added the upper and lower decoration lines
   public
   def get_rows
     # ˅
@@ -36,14 +38,11 @@ class FullFrame < Frame
   def get_line_text(row)
     # ˅
     if row == 0
-      # Upper frame
-      return "+#{create_line("-", @display.get_columns)}+"
+      return "+#{create_line("-", @display.get_columns)}+"  # Upper frame
     elsif row == @display.get_rows + 1
-      # Bottom frame
-      return "+#{create_line("-", @display.get_columns)}+"
+      return "+#{create_line("-", @display.get_columns)}+"  # Bottom frame
     else
-      # Other
-      return "|#{@display.get_line_text(row - 1)}|"
+      return "|#{@display.get_line_text(row - 1)}|"             # Other
     end
     # ˄
   end

@@ -3,7 +3,9 @@
 require_relative 'char_display'
 require_relative 'string_display'
 
-# Display the character and string repeatedly 5 times.
+=begin
+Display a character or string repeatedly 5 times.
+=end
 
 display_1 = CharDisplay.new("H")
 display_1.output

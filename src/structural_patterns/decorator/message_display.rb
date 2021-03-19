@@ -21,6 +21,7 @@ class MessageDisplay < Display
     # ˄
   end
 
+  # Number of characters
   public
   def get_columns
     # ˅
@@ -28,6 +29,7 @@ class MessageDisplay < Display
     # ˄
   end
 
+  # The number of rows is 1
   public
   def get_rows
     # ˅

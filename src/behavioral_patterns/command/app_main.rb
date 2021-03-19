@@ -68,19 +68,19 @@ class AppMain
   end
 
   private
-  def clear
-    # ˅
-    @canvas.clear
-    @history.clear
-    # ˄
-  end
-
-  private
   def undo
     # ˅
     @canvas.clear
     @history.undo
     @history.execute
+    # ˄
+  end
+
+  private
+  def clear
+    # ˅
+    @canvas.clear
+    @history.clear
     # ˄
   end
 

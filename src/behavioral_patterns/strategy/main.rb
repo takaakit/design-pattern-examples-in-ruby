@@ -7,11 +7,9 @@ require_relative 'random_strategy'
 require_relative 'game_result_type'
 
 =begin
-A game of rock-scissors-paper.
-There are two strategies below.
-
-* When winning a game, show the same hand at the next time.
-* Calculate a hand from the previous hand stochastically.
+A game of rock-scissors-paper. Two strategies are available:
+* Random Strategy: showing a random hand signal.
+* Mirror Strategy: showing a hand signal from the previous opponent's hand signal.
 =end
 
 player1 = Player.new("Emily", MirrorStrategy.new)

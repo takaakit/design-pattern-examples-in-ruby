@@ -4,7 +4,9 @@ require_relative 'display'
 require_relative 'multi_line_display'
 require_relative 'text_display_impl'
 
-# Display only one line or display the specified number of lines.
+=begin
+Display only one line or display the specified number of lines.
+=end
 
 d_1 = Display.new(TextDisplayImpl.new("Japan"))
 d_1.output

@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 require_relative 'singleton_'
 
-# Check whether the same instance is obtained.
+=begin
+Check whether the same instance is obtained.
+=end
 
 obj_1 = Singleton_.instance
 obj_2 = Singleton_.instance

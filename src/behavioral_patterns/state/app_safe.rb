@@ -8,6 +8,7 @@ require_relative 'daytime_state'
 
 # ˄
 
+# Safe security system that the security status changes with time.
 class AppSafe < Context
   # ˅
 
@@ -82,9 +83,11 @@ class AppSafe < Context
     else
       clock_string += "#{hour}:00"
     end
+
     puts clock_string
     @text_time.delete(0, "end")
     @text_time.insert(0, clock_string)
+
     @state.set_time(self, hour)
     # ˄
   end
@@ -116,6 +119,18 @@ class AppSafe < Context
     # ˄
   end
 
+  public
+  def count_time
+    # ˅
+    loop do
+      for hour in 0..23
+        set_time(hour)    # Set the time
+        sleep(1)
+      end
+    end
+    # ˄
+  end
+
   private
   def use_safe
     # ˅
@@ -141,18 +156,6 @@ class AppSafe < Context
   def exit
     # ˅
     @root.destroy
-    # ˄
-  end
-
-  public
-  def count_time
-    # ˅
-    loop do
-      for hour in 0..23
-        set_time(hour)    # Set the time
-        sleep(1)
-      end
-    end
     # ˄
   end
 

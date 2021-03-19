@@ -4,7 +4,9 @@ require_relative 'book'
 require_relative 'book_shelf'
 require_relative 'book_shelf_iterator'
 
-# Add books in the bookshelf and display the names of the books in turn.
+=begin
+Add books in a bookshelf and display the names of the book in turn.
+=end
 
 book_shelf = BookShelf.new(5)
 book_shelf.add(Book.new("Design Patterns: Elements of Reusable Object-Oriented Software"))

@@ -11,9 +11,9 @@ class CharDisplay < AbstractDisplay
   # ˄
 
   public
-  def initialize(char)
+  def initialize(char_value)
 
-    @char = char
+    @char_value = char_value
 
     # ˅
     
@@ -30,7 +30,7 @@ class CharDisplay < AbstractDisplay
   public
   def write
     # ˅
-    print @char   # Display the character.
+    print @char_value   # Display the character.
     # ˄
   end
 

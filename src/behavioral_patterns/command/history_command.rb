@@ -48,7 +48,7 @@ class HistoryCommand < Command
     # ˄
   end
 
-  # Delete all past commands.
+  # Delete all past commands
   public
   def clear
     # ˅

@@ -9,6 +9,7 @@ class Strategy
   
   # ˄
 
+  # Show a hand signal.
   public
   def show_hand_signal
     # ˅
@@ -16,6 +17,7 @@ class Strategy
     # ˄
   end
 
+  # Notify a game result.
   public
   def notify_game_result(result, own_hand, opponents_hand)
     # ˅

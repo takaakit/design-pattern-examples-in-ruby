@@ -27,7 +27,7 @@ class Action < Node
     # ˅
     current_token = context.get_token
     if current_token != "forward" and current_token != "right" and current_token != "left"
-      abort "#{current_token} is unknown"
+      abort("#{current_token} is unknown")
     end
     
     @name = current_token   # Hold the current token as this action name

@@ -4,7 +4,12 @@ require_relative 'framework/manager'
 require_relative 'underline_display'
 require_relative 'frame_display'
 
-# Display a character string enclosed with a frame line, or drawn with an underline.
+=begin
+Display a string enclosed with a frame line, or drawn with an underline. The Client (Main)
+registers instances of the Display subclass in the Manager class. When necessary,
+the Manager class asks those registered instances to return a clone. The Client (Main)
+requires the returned clones to display.
+=end
 
 manager = Manager.new
 

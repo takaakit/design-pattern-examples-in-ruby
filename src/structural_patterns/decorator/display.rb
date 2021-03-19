@@ -16,6 +16,7 @@ class Display
     # ˄
   end
 
+  # Column width
   public
   def get_columns
     # ˅
@@ -23,6 +24,7 @@ class Display
     # ˄
   end
 
+  # Number of rows
   public
   def get_rows
     # ˅

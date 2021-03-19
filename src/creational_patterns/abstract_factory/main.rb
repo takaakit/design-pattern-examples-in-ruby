@@ -4,7 +4,9 @@ require_relative 'factory/factory'
 require_relative 'list_factory/list_factory'
 require_relative 'table_factory/table_factory'
 
-# Create a hierarchical link collection as an HTML file.
+=begin
+Create a hierarchical link collection as an HTML file. It can be created in either tabular or list format.
+=end
 
 puts "Please enter a number (1 or 2):"
 puts "  1: Create objects by using ListFactory"
@@ -17,8 +19,7 @@ if number == 1
 elsif number == 2
   $factory = TableFactory.new
 else
-  puts "The value is not 1 or 2."
-  exit(1)
+  abort("The value is not 1 or 2.")
 end
 
 washington_post = $factory.create_link("The Washington Post", "https://www.washingtonpost.com/")

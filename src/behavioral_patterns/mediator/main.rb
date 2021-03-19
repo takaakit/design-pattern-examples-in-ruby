@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 require_relative 'app_login'
 
-# Login dialog for entering a username and password.
+=begin
+Show a login dialog for entering a username and password. The dialog has the following elements:
+* "Guest" and "Login" radio buttons
+* "Username" and "Password" text fields
+* "OK" and "Cancel" buttons
+=end
 
 AppLogin.new
