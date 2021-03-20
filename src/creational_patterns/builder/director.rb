@@ -5,7 +5,7 @@ require_relative 'builder'
 
 # ˄
 
-class Directory
+class Director
   # ˅
   
   # ˄

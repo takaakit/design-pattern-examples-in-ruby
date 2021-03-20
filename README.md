@@ -13,7 +13,7 @@ This project is available for the following objectives:
 
 > UML model example:
 
-![](screenshots/CompositePattern.png "Composite Pattern")
+![](screenshots/CompositePattern.svg "Composite Pattern")
 
 > Ruby code example:
 
@@ -28,13 +28,32 @@ require_relative 'file_system_element'
 # Since class name of "File" can not be used duplicately, the class name is "File_".
 class File_ < FileSystemElement
   # ˅
-
+  
   # ˄
 
   public
   def initialize(name, size)
+
+    @name = name
+
+    @size = size
+
     # ˅
-    super(name, size)
+
+    # ˄
+  end
+
+  public
+  def name
+    # ˅
+    return @name
+    # ˄
+  end
+
+  public
+  def size
+    # ˅
+    return @size
     # ˄
   end
 
@@ -42,12 +61,12 @@ class File_ < FileSystemElement
   public
   def print(upper_path)
     # ˅
-    puts upper_path + "/" + to_string
+    puts "#{upper_path}/#{self}"
     # ˄
   end
 
   # ˅
-
+  
   # ˄
 end
 
