@@ -19,7 +19,7 @@ class MultiLineDisplay < Display
 
   # Repeat display for the specified number of times
   public
-  def display_multiple(times)
+  def output_multiple(times)
     # ˅
     open
     for i in 0..times-1

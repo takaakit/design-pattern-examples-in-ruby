@@ -13,4 +13,4 @@ d_1.output
 
 d_2 = MultiLineDisplay.new(TextDisplayImpl.new("The United States of America"))
 d_2.output
-d_2.display_multiple(3)
+d_2.output_multiple(3)
