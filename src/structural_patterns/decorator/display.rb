@@ -20,7 +20,7 @@ class Display
   public
   def get_columns
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
@@ -28,14 +28,14 @@ class Display
   public
   def get_rows
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
   public
   def get_line_text(row)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

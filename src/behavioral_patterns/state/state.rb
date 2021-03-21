@@ -13,7 +13,7 @@ class State
   public
   def set_time(context, hour)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
@@ -21,7 +21,7 @@ class State
   public
   def use_safe(context)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
@@ -29,7 +29,7 @@ class State
   public
   def sound_bell(context)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
@@ -37,7 +37,7 @@ class State
   public
   def call(context)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

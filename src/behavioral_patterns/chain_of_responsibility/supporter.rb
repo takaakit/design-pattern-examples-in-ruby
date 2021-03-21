@@ -50,7 +50,7 @@ class Supporter
   protected
   def can_handle(trouble)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

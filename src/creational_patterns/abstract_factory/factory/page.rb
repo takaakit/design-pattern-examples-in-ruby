@@ -28,7 +28,7 @@ class Page
   public
   def to_html
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

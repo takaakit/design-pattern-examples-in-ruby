@@ -29,7 +29,7 @@ class Number
   public
   def generate
     # ˅
-
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

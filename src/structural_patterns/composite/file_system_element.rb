@@ -12,14 +12,14 @@ class FileSystemElement
   public
   def name
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
   public
   def size
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
@@ -27,7 +27,7 @@ class FileSystemElement
   public
   def print(upper_path)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

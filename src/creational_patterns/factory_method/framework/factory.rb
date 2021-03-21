@@ -17,10 +17,10 @@ class Factory
     # ˄
   end
 
-  protected
+  public
   def create_product(owner)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

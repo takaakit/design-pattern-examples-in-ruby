@@ -12,7 +12,7 @@ class Command
   public
   def execute
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

@@ -32,8 +32,8 @@ class HTMLBuilder < Builder
     # ˅
     @file_name = "#{title}.html"         # Set a title as a file name
     @writer = File.open(@file_name, "w")
-    @writer.write("<html><head><title>#{title}</title></head><body>")
-    @writer.write("<h1>#{title}</h1>")
+    @writer.write("<html><head><title>#{title}</title></head><body>\n")
+    @writer.write("<h1>#{title}</h1>\n")
     # ˄
   end
 
@@ -41,7 +41,7 @@ class HTMLBuilder < Builder
   public
   def create_section(section)
     # ˅
-    @writer.write("<p>#{section}</p>")   # Write a section
+    @writer.write("<p>#{section}</p>\n")   # Write a section
     # ˄
   end
 
@@ -49,18 +49,18 @@ class HTMLBuilder < Builder
   public
   def create_items(items)
     # ˅
-    @writer.write("<ul>")   # Write items
+    @writer.write("<ul>\n")   # Write items
     for item in items
-      @writer.write("<li>#{item}</li>")
+      @writer.write("<li>#{item}</li>\n")
     end
-    @writer.write("</ul>")
+    @writer.write("</ul>\n")
     # ˄
   end
 
   public
   def close
     # ˅
-    @writer.write("</body></html>")
+    @writer.write("</body></html>\n")
     @writer.close       # Close file
     # ˄
   end

@@ -13,7 +13,7 @@ class Context
   public
   def set_time(hour)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
@@ -21,7 +21,7 @@ class Context
   public
   def change_state(state)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
@@ -29,7 +29,7 @@ class Context
   public
   def call_security_guards_room(msg)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
@@ -37,7 +37,7 @@ class Context
   public
   def record_security_log(msg)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

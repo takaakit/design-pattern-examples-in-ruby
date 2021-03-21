@@ -12,7 +12,7 @@ class Observer
   public
   def update(number)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

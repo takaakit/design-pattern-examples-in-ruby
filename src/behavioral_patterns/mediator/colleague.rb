@@ -26,7 +26,7 @@ class Colleague
   public
   def set_activation(is_enable)
     # ˅
-
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

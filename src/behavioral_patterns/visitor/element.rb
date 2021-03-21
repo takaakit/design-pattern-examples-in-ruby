@@ -12,7 +12,7 @@ class Element
   public
   def accept(visitor)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

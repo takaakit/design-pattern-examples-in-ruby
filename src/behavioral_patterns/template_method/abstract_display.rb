@@ -12,21 +12,21 @@ class AbstractDisplay
   public
   def open
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
   public
   def write
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
   public
   def close
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

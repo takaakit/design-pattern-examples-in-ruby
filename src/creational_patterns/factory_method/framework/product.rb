@@ -12,7 +12,7 @@ class Product
   public
   def use
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

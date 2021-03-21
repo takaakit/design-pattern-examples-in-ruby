@@ -13,7 +13,7 @@ class Strategy
   public
   def show_hand_signal
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
@@ -21,7 +21,7 @@ class Strategy
   public
   def notify_game_result(result, own_hand, opponents_hand)
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

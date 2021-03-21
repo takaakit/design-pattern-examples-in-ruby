@@ -12,7 +12,7 @@ class Aggregate
   public
   def iterator
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 

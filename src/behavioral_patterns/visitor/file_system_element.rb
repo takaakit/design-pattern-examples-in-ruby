@@ -13,14 +13,14 @@ class FileSystemElement < Element
   public
   def name
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
   public
   def size
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
