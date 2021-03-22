@@ -43,11 +43,11 @@ class AppSafe < Context
     message_frame.pack
 
     scrollbar = TkScrollbar.new(message_frame)
-    scrollbar.pack('fill' => 'y', 'side' => 'right')
+    scrollbar.pack("fill" => "y", "side" => "right")
     text_message = TkText.new(message_frame)
     text_message.width = 60
     text_message.height = 20
-    text_message.pack('side' => 'right')
+    text_message.pack("side" => "right")
     text_message.yscrollbar(scrollbar)
     @text_message = text_message
 

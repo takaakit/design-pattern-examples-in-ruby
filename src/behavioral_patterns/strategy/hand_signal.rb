@@ -19,7 +19,7 @@ class HandSignal
   PAPER = 2
 
   # Characters of the hands
-  @@name = ['Rock', 'Scissors', 'Paper']
+  @@name = ["Rock", "Scissors", "Paper"]
 
   public
   attr_reader :value

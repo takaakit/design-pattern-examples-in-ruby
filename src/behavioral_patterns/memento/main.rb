@@ -20,7 +20,7 @@ for i in 1..10
 
   # Determine the behavior of the Memento
   if gamer.money > memento.money
-    puts "(Gamers' money is the highest ever, so record the current state.)"
+    puts "(Gamer's money is the highest ever, so record the current state.)"
     memento = gamer.create_memento
   elsif gamer.money < memento.money / 2
     puts "(Gamer's money is less than half of the highest amount, so return to the recorded state.)"
