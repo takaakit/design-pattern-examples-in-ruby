@@ -12,10 +12,21 @@ class DigitObserver < Observer
   # ˄
 
   public
-  def update(number)
+  def initialize(number_subject)
+
+    @number_subject = number_subject
+
     # ˅
-    puts "Digit    : #{number.value}"
-    sleep(0.1)
+    
+    # ˄
+  end
+
+  public
+  def update(changed_subject)
+    # ˅
+    if changed_subject === @number_subject
+      puts "Digit    : #{@number_subject.value}"
+    end
     # ˄
   end
 

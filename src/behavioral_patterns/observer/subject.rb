@@ -6,18 +6,13 @@ require_relative 'observer'
 # ˄
 
 # An abstract class that generates numbers.
-class Number
+class Subject
   # ˅
 
   # ˄
 
   public
-  attr_accessor :value
-
-  public
   def initialize
-
-    @value = 0
 
     @observers = []
 
@@ -27,21 +22,14 @@ class Number
   end
 
   public
-  def generate
-    # ˅
-    raise NotImplementedError.new("This is an abstract method")
-    # ˄
-  end
-
-  public
-  def add_observer(observer)
+  def attach(observer)
     # ˅
     @observers.push(observer)
     # ˄
   end
 
   public
-  def remove_observer(observer)
+  def detach(observer)
     # ˅
     @observers.delete(observer)
     # ˄

@@ -1,31 +1,38 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 # ˅
-require_relative 'number'
+require_relative 'subject'
 
 # ˄
 
 # Generate a random number.
-class RandomNumber < Number
+class NumberSubject < Subject
   # ˅
 
   # ˄
 
   public
   def initialize
+
+    @value = 0
+
     # ˅
     super
     # ˄
   end
 
   public
-  def generate
+  def value
     # ˅
-    random = Random.new
-    for i in 0..19
-      @value = random.rand(50)
-      notify_observers
-    end
+    return @value
+    # ˄
+  end
+
+  public
+  def value=(value)
+    # ˅
+    @value = value
+    notify_observers
     # ˄
   end
 

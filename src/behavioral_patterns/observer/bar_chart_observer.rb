@@ -12,14 +12,25 @@ class BarChartObserver < Observer
   # ˄
 
   public
-  def update(number)
+  def initialize(number_subject)
+
+    @number_subject = number_subject
+
     # ˅
-    print "Bar chart: "
-    for i in 0..number.value - 1
-      print "*"
+    
+    # ˄
+  end
+
+  public
+  def update(changed_subject)
+    # ˅
+    if changed_subject === @number_subject
+      print "Bar chart: "
+      for i in 0..@number_subject.value-1
+        print "*"
+      end
+      puts ""
     end
-    puts ""
-    sleep(0.1)
     # ˄
   end
 

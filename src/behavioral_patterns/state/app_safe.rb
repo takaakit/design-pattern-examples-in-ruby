@@ -34,34 +34,43 @@ class AppSafe < Context
     time_frame = TkFrame.new(@root)
     time_frame.pack("anchor" => "w")
 
-    text_time = TkEntry.new(time_frame, "width" => 20)
+    text_time = TkEntry.new(time_frame)
+    text_time.width = 20
     text_time.grid("sticky" => "w")
     @text_time = text_time
 
     message_frame = TkFrame.new(@root)
     message_frame.pack
 
-    scrollbar = TkScrollbar.new(message_frame).pack('fill' => 'y', 'side' => 'right')
-    text_message = TkText.new(message_frame, "width" => 60, "height" => 20).pack('side' => 'right')
+    scrollbar = TkScrollbar.new(message_frame)
+    scrollbar.pack('fill' => 'y', 'side' => 'right')
+    text_message = TkText.new(message_frame)
+    text_message.width = 60
+    text_message.height = 20
+    text_message.pack('side' => 'right')
     text_message.yscrollbar(scrollbar)
     @text_message = text_message
 
     button_frame = TkFrame.new(@root)
     button_frame.pack
 
-    button_use = TkButton.new(button_frame, "text" => "Use")
+    button_use = TkButton.new(button_frame)
+    button_use.text = "Use"
     button_use.bind("Button-1", proc{use_safe})         # Use button pressed
     button_use.grid("row" => 0, "column" => 0)
 
-    button_alarm = TkButton.new(button_frame, "text" => "Alarm")
+    button_alarm = TkButton.new(button_frame)
+    button_alarm.text = "Alarm"
     button_alarm.bind("Button-1", proc{sound_bell})     # Alarm button pressed
     button_alarm.grid("row" => 0, "column" => 1)
 
-    button_phone = TkButton.new(button_frame, "text" => "Phone")
+    button_phone = TkButton.new(button_frame)
+    button_phone.text = "Phone"
     button_phone.bind("Button-1", proc{call})           # Phone button pressed
     button_phone.grid("row" => 0, "column" => 2)
 
-    button_exit = TkButton.new(button_frame, "text" => "Exit")
+    button_exit = TkButton.new(button_frame)
+    button_exit.text = "Exit"
     button_exit.bind("Button-1", proc{exit})            # Exit button pressed
     button_exit.grid("row" => 0, "column" => 3)
 

@@ -10,7 +10,7 @@ class Observer
   # ˄
 
   public
-  def update(number)
+  def update(changed_subject)
     # ˅
     raise NotImplementedError.new("This is an abstract method")
     # ˄
