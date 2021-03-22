@@ -21,7 +21,7 @@ class UnderlineDisplay < Display
   end
 
   public
-  def create_clone
+  def clone
     # ˅
     return UnderlineDisplay.new(@underline_char)
     # ˄

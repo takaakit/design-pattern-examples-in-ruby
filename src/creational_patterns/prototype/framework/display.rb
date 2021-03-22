@@ -10,7 +10,7 @@ class Display
   # ˄
 
   public
-  def create_clone
+  def clone
     # ˅
     raise NotImplementedError.new("This is an abstract method")
     # ˄

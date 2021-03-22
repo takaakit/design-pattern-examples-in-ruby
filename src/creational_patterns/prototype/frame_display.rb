@@ -21,7 +21,7 @@ class FrameDisplay < Display
   end
 
   public
-  def create_clone
+  def clone
     # ˅
     return FrameDisplay.new(@border_char)
     # ˄
