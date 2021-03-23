@@ -37,7 +37,14 @@ class AppLogin < Mediator
     @root.title = "Mediator Example"
 
     create_colleagues
-    set_mediators
+
+    # Set mediators
+    @radio_login.mediator = self
+    @radio_guest.mediator = self
+    @text_username.mediator = self
+    @text_password.mediator = self
+    @button_ok.mediator = self
+    @button_cancel.mediator = self
 
     colleague_changed
 
@@ -127,19 +134,6 @@ class AppLogin < Mediator
     button_cancel.text = "Cancel"
     button_cancel.grid("row" => 0, "column" => 1)
     @button_cancel = ColleagueButton.new(button_cancel)
-    # ˄
-  end
-
-  # Set mediators
-  private
-  def set_mediators
-    # ˅
-    @radio_login.mediator = self
-    @radio_guest.mediator = self
-    @text_username.mediator = self
-    @text_password.mediator = self
-    @button_ok.mediator = self
-    @button_cancel.mediator = self
     # ˄
   end
 

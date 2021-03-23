@@ -13,7 +13,7 @@ class RealPrinter < Printer
   public
   def initialize(name)
 
-    @printer_name = name
+    @name = name
 
     # ˅
     heavy_task("Creating an instance (#{name}) of the Printer")
@@ -21,9 +21,16 @@ class RealPrinter < Printer
   end
 
   public
-  def printer_name=(value)
+  def get_name
     # ˅
-    @printer_name = value
+    return @name
+    # ˄
+  end
+
+  public
+  def change_name(name)
+    # ˅
+    @name = value
     # ˄
   end
 
@@ -33,7 +40,7 @@ class RealPrinter < Printer
     # ˅
     puts "=========="
     puts content
-    puts "Printed by #{@printer_name}"
+    puts "Printed by #{@name}"
     puts "=========="
     # ˄
   end

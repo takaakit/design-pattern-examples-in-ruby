@@ -56,26 +56,21 @@ class AppSafe < Context
 
     button_use = TkButton.new(button_frame)
     button_use.text = "Use"
-    button_use.bind("Button-1", proc{use_safe})         # Use button pressed
+    button_use.bind("Button-1", proc{pressed_use_button})
     button_use.grid("row" => 0, "column" => 0)
 
     button_alarm = TkButton.new(button_frame)
     button_alarm.text = "Alarm"
-    button_alarm.bind("Button-1", proc{sound_bell})     # Alarm button pressed
+    button_alarm.bind("Button-1", proc{pressed_alarm_button})
     button_alarm.grid("row" => 0, "column" => 1)
 
     button_phone = TkButton.new(button_frame)
     button_phone.text = "Phone"
-    button_phone.bind("Button-1", proc{call})           # Phone button pressed
+    button_phone.bind("Button-1", proc{pressed_phone_button})
     button_phone.grid("row" => 0, "column" => 2)
 
-    button_exit = TkButton.new(button_frame)
-    button_exit.text = "Exit"
-    button_exit.bind("Button-1", proc{exit})            # Exit button pressed
-    button_exit.grid("row" => 0, "column" => 3)
-
     Thread.start {
-      count_time
+      count_up_time
     }
 
     @root.mainloop
@@ -128,8 +123,29 @@ class AppSafe < Context
     # ˄
   end
 
-  public
-  def count_time
+  private
+  def pressed_use_button
+    # ˅
+    @state.use(self)
+    # ˄
+  end
+
+  private
+  def pressed_alarm_button
+    # ˅
+    @state.alarm(self)
+    # ˄
+  end
+
+  private
+  def pressed_phone_button
+    # ˅
+    @state.phone(self)
+    # ˄
+  end
+
+  private
+  def count_up_time
     # ˅
     loop do
       for hour in 0..23
@@ -137,34 +153,6 @@ class AppSafe < Context
         sleep(1)
       end
     end
-    # ˄
-  end
-
-  private
-  def use_safe
-    # ˅
-    @state.use_safe(self)
-    # ˄
-  end
-
-  private
-  def sound_bell
-    # ˅
-    @state.sound_bell(self)
-    # ˄
-  end
-
-  private
-  def call
-    # ˅
-    @state.call(self)
-    # ˄
-  end
-
-  private
-  def exit
-    # ˅
-    @root.destroy
     # ˄
   end
 

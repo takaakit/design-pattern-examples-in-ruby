@@ -56,7 +56,7 @@ class HtmlWriter
   end
 
   # Write a link
-  public
+  private
   def anchor(url, text)
     # ˅
     paragraph("<a href=\"#{url}\">#{text}</a>")

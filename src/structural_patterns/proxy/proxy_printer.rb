@@ -6,7 +6,7 @@ require_relative 'real_printer'
 
 # ˄
 
-class PrinterProxy < Printer
+class ProxyPrinter < Printer
   # ˅
   
   # ˄
@@ -25,19 +25,19 @@ class PrinterProxy < Printer
   end
 
   public
-  def printer_name
+  def get_name
     # ˅
     return @current_name
     # ˄
   end
 
   public
-  def printer_name=(value)
+  def change_name(name)
     # ˅
     if @real.nil? == false
       @real.printer_name = value
     end
-    @current_name = value
+    @current_name = name
     # ˄
   end
 

@@ -13,7 +13,6 @@ class DaytimeState < State
 
   # ˄
 
-  # Set time
   public
   def set_time(context, hour)
     # ˅
@@ -23,25 +22,22 @@ class DaytimeState < State
     # ˄
   end
 
-  # Use a safe
   public
-  def use_safe(context)
+  def use(context)
     # ˅
     context.record_security_log("Use a safe in the daytime")
     # ˄
   end
 
-  # Sound a emergency bell
   public
-  def sound_bell(context)
+  def alarm(context)
     # ˅
     context.call_security_guards_room("Sound a emergency bell in the daytime")
     # ˄
   end
 
-  # Make a normal call
   public
-  def call(context)
+  def phone(context)
     # ˅
     context.call_security_guards_room("Make a normal call in the daytime")
     # ˄

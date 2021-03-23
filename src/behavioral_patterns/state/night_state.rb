@@ -13,7 +13,6 @@ class NightState < State
 
   # ˄
 
-  # Set time
   public
   def set_time(context, hour)
     # ˅
@@ -23,25 +22,22 @@ class NightState < State
     # ˄
   end
 
-  # Use a safe
   public
-  def use_safe(context)
+  def use(context)
     # ˅
     context.call_security_guards_room("Emergency: Use a safe at night!")
     # ˄
   end
 
-  # Sound a emergency bell
   public
-  def sound_bell(context)
+  def alarm(context)
     # ˅
     context.call_security_guards_room("Sound a emergency bell at night")
     # ˄
   end
 
-  # Make a normal call
   public
-  def call(context)
+  def phone(context)
     # ˅
     context.record_security_log("Record a night call")
     # ˄
