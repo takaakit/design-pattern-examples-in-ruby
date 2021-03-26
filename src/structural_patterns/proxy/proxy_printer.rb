@@ -35,7 +35,7 @@ class ProxyPrinter < Printer
   def change_name(name)
     # ˅
     if @real.nil? == false
-      @real.printer_name = value
+      @real.change_name(name)
     end
     @current_name = name
     # ˄

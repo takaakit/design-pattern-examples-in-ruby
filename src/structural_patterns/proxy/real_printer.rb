@@ -30,7 +30,7 @@ class RealPrinter < Printer
   public
   def change_name(name)
     # ˅
-    @name = value
+    @name = name
     # ˄
   end
 

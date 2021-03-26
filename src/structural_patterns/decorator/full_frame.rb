@@ -42,7 +42,7 @@ class FullFrame < Frame
     elsif row == @display.get_rows + 1
       return "+#{create_line("-", @display.get_columns)}+"  # Bottom frame
     else
-      return "|#{@display.get_line_text(row - 1)}|"             # Other
+      return "|#{@display.get_line_text(row - 1)}|"         # Other
     end
     # ˄
   end

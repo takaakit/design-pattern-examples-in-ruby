@@ -24,7 +24,7 @@ class CreditCard < Product
   public
   def use
     # ˅
-    puts "User #{@owner}\'s card."
+    puts "Use #{@owner}\'s card."
     # ˄
   end
 

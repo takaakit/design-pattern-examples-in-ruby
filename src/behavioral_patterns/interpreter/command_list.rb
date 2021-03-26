@@ -34,7 +34,7 @@ class CommandList < Node
         a_node = Command.new
         a_node.parse(context)
         
-        @nodes.push(a_node.to_s)    # Hold the parsed node
+        @nodes.push(a_node)    # Hold the parsed node
       end
     end
     # ˄

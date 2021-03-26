@@ -43,7 +43,7 @@ class MessageDisplay < Display
     if row == 0
       return @message
     else
-      return nil
+      return ""
     end
     # ˄
   end

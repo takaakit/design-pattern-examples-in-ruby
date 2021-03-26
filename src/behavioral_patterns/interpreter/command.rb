@@ -25,6 +25,7 @@ class Command < Node
   public
   def parse(context)
     # ˅
+    a_node = nil
     if context.get_token == "repeat"
       a_node = Repeat.new
       a_node.parse(context)

@@ -13,7 +13,7 @@ class LazySupporter < Supporter
   public
   def initialize(name)
     # ˅
-    super
+    super(name)
     # ˄
   end
 
