@@ -32,7 +32,7 @@ class DaytimeState < State
   public
   def alarm(context)
     # ˅
-    context.call_security_guards_room("Sound a emergency bell in the daytime")
+    context.call_security_guards_room("Sound an emergency bell in the daytime")
     # ˄
   end
 

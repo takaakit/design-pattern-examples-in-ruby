@@ -32,7 +32,7 @@ class NightState < State
   public
   def alarm(context)
     # ˅
-    context.call_security_guards_room("Sound a emergency bell at night")
+    context.call_security_guards_room("Sound an emergency bell at night")
     # ˄
   end
 
