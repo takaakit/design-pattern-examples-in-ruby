@@ -34,8 +34,6 @@ class AppLogin < Mediator
     @root = TkRoot.new
 
     # ˅
-    @root.title = "Mediator Example"
-
     create_colleagues
 
     # Set mediators
@@ -81,6 +79,8 @@ class AppLogin < Mediator
   public
   def create_colleagues
     # ˅
+    @root.title = "Mediator Example"
+
     radio_button_frame = TkFrame.new(@root)
     radio_button_frame.pack("anchor" => "w")
 

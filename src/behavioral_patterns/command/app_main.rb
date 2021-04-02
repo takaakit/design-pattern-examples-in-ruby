@@ -28,7 +28,6 @@ class AppMain
     @root = TkRoot.new
 
     # ˅
-    @root.title = "Command Example"
     create_widgets
     @root.mainloop
     # ˄
@@ -37,6 +36,8 @@ class AppMain
   private
   def create_widgets
     # ˅
+    @root.title = "Command Example"
+
     tk_canvas = TkCanvas.new(@root)
     tk_canvas.background = "white"
     tk_canvas.width = 400
