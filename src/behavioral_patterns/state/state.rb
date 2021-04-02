@@ -40,7 +40,7 @@ class State
   public
   def to_s
     # ˅
-    
+    raise NotImplementedError.new("This is an abstract method")
     # ˄
   end
 
