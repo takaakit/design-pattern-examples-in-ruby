@@ -13,7 +13,13 @@ class Factory
   public
   def create(owner)
     # ˅
-    return create_product(owner)
+    # Write pre-creation code here, if any.
+
+    product = create_product(owner)
+
+    # Write post-creation code here, if any.
+
+    return product
     # ˄
   end
 
