@@ -85,7 +85,7 @@ Installation
   **Use ver.2.5.0 or higher.**
 
 **Development Environment for Ruby**
-* Install Ruby and Ruby's Tk module. The operation has been confirmed in Ruby **2.3.3** and Tcl/Tk **8.5** on Windows 10.
+* Install [Ruby](https://www.ruby-lang.org/en/downloads/) and [Ruby/Tk](https://github.com/ruby/tk#installation). The operation has been confirmed in Ruby **3.0.1** and Ruby/Tk **0.4.0** on Windows 10.
 * Prepare an arbitrary development environment for Ruby (e.g. [RubyMine](https://www.jetbrains.com/ruby/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/)).
 
 Usage
