@@ -14,6 +14,7 @@ This project is available for the following objectives:
 
 ![](screenshots/CompositePattern.svg "Composite Pattern")
 
+<a id="code-example"></a>
 > Ruby code example:
 
 ```ruby:File class
@@ -76,25 +77,29 @@ end
 
 Installation
 ------------
-**Astah**
-* Download Astah UML or Professional from [Change Vision site](http://astah.net/download), and install.  
+**UML Modeling Tool**
+* Download the modeling tool [Astah](http://astah.net/download) UML or Professional, and install.  
+* Download [M PLUS](https://sites.google.com/view/m-plus-plugin/download) plug-in **ver.2.5.0** or higher, and add it to Astah.  
+  [How to add plugins to Astah](https://astahblog.com/2014/12/15/astah_plugins/)
 
-**M PLUS plug-in**
-* Download the plug-in from [M PLUS plug-in site](https://sites.google.com/view/m-plus-plugin/download), and install.  
-  **Use ver.2.5.0 or higher.**
-
-**Development Environment for Ruby**
-* Install [Ruby](https://www.ruby-lang.org/en/downloads/) and [Ruby/Tk](https://github.com/ruby/tk#installation). The operation has been confirmed in Ruby **3.0.1** and Ruby/Tk **0.4.0** on Windows 10.
-* Prepare an arbitrary development environment for Ruby (e.g. [RubyMine](https://www.jetbrains.com/ruby/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/)).
+**Ruby Development Environment**  
+* nstall [Ruby](https://www.ruby-lang.org/en/downloads/) and [Ruby/Tk](https://github.com/ruby/tk#installation). The operation has been confirmed in Ruby **3.0.1** and Ruby/Tk **0.4.0** on Windows 10.
+* Optionally, install an IDE (e.g. [RubyMine](https://www.jetbrains.com/ruby/download/)).
 
 Usage
 -----
-* Select model elements on the model browser of Astah, and press the "Generate code" button to generate.  
-* The generated code has "User Code Area". The "User Code Area" is the area enclosed by "˅" and "˄". Handwritten code written in the "User Code Area" remains after a re-generation.
-* You can run the program from "main.rb" for each Design Pattern.
-* For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin-tips).
+**Code Generation from UML**
+  1. Open the Astah file (model/DesignPatternExamplesInRuby.asta).
+  2. Select model elements on the model browser of Astah.
+  3. Click the **Generate Code** button.  
+  ![](screenshots/GenerateCode.gif "Generate Code")  
+  The generated code has **User Code Area**. The User Code Area is the area enclosed by "˅" and "˄". Handwritten code written in the User Code Area remains after a re-generation. [View code example](#code-example).  
+  For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin-tips).
 
-![](screenshots/Usage.gif "Usage")
+**Run (if you use RubyMine)**
+  1. Open the project root directory (design-pattern-examples-in-ruby) in RubyMine.
+  2. Open `main.rb` for the pattern you want to run, and click `Run` icon in the left gutter.
+     ![](screenshots/Run.gif "Run")  
 
 References
 ----------
