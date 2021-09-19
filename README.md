@@ -17,7 +17,7 @@ This project is available for the following objectives:
 <a id="code-example"></a>
 > Ruby code example:
 
-```ruby:File class
+```ruby
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 # ˅
