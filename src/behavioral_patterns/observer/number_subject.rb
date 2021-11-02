@@ -5,7 +5,7 @@ require_relative 'subject'
 
 # ˄
 
-# Generate a random number.
+# Holds a value and notifies observers when the value is set.
 class NumberSubject < Subject
   # ˅
 
