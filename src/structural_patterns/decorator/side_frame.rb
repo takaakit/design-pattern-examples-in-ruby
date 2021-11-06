@@ -18,6 +18,10 @@ class SideFrame < Frame
 
     # ˅
     super(display)
+
+    if @frame_char.length != 1
+      abort("Only one character is allowed in a side frame.")
+    end
     # ˄
   end
 
