@@ -13,11 +13,9 @@ class Context
   public
   def initialize(text)
 
-    @array_text = text.split
+    @tokens = text.split
 
     @current_index = 0
-
-    @array_size = @array_text.length
 
     # ˅
     
@@ -27,10 +25,10 @@ class Context
   public
   def next_token
     # ˅
-    if @current_index < @array_size
+    if @current_index < @tokens.length
       pre_index = @current_index
       @current_index += 1
-      return @array_text[pre_index]
+      return @tokens[pre_index]
     else
       return nil
     end
@@ -40,14 +38,14 @@ class Context
   public
   def get_token
     # ˅
-    return @array_text[@current_index]
+    return @tokens[@current_index]
     # ˄
   end
 
   public
   def slide_token(token)
     # ˅
-    if token != @array_text[@current_index]
+    if token != @tokens[@current_index]
       abort("WARNING: #{token} is expected but #{get_token} was found.")
     end
     next_token
