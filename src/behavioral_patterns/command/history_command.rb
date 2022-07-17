@@ -22,6 +22,7 @@ class HistoryCommand < Command
     # ˄
   end
 
+  # Execute all past commands
   public
   def execute
     # ˅

@@ -38,7 +38,7 @@ class Supporter
     # ˄
   end
 
-  # Set a next supporter.
+  # Set a next supporter and return it.
   public
   def set_next(_next)
     # ˅
