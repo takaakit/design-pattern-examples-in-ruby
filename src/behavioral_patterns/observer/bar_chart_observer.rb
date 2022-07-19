@@ -24,6 +24,7 @@ class BarChartObserver < Observer
   public
   def update(changed_subject)
     # ˅
+    # Before processing, it checks to make sure the changed subject is the subject held.
     if changed_subject === @number_subject
       print "Bar chart: "
       for i in 0..@number_subject.value-1

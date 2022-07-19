@@ -31,6 +31,7 @@ class NumberSubject < Subject
   public
   def value=(value)
     # ˅
+    # Notify observers when the value is set.
     @value = value
     notify_observers
     # ˄

@@ -24,6 +24,7 @@ class DigitObserver < Observer
   public
   def update(changed_subject)
     # ˅
+    # Before processing, it checks to make sure the changed subject is the subject held.
     if changed_subject === @number_subject
       puts "Digit    : #{@number_subject.value}"
     end
