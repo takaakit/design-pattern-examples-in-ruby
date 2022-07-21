@@ -148,6 +148,7 @@ class AppSafe < Context
   def count_up_time
     # ˅
     loop do
+      # Advance one hour for every second of real time.
       for hour in 0..23
         set_time(hour)    # Set the time
         sleep(1)
