@@ -6,6 +6,7 @@ require_relative 'print'
 
 # ˄
 
+# Adapt the MessageDisplay interface to the Print interface.
 class PrintMessageDisplay < MessageDisplay
   include Print
   # ˅
