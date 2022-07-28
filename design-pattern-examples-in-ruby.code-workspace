@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"code-runner.respectShebang": false
+		"code-runner.respectShebang": false,
+		"code-runner.runInTerminal": true
 	}
 }
