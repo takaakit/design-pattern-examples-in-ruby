@@ -83,7 +83,10 @@ Installation
   [How to add plugins to Astah](https://astahblog.com/2014/12/15/astah_plugins/)
 
 **Ruby Development Environment**  
-* nstall [Ruby](https://www.ruby-lang.org/en/downloads/) and [Ruby/Tk](https://github.com/ruby/tk#installation). The operation has been confirmed in Ruby **3.0.1** and Ruby/Tk **0.4.0** on Windows 10.
+* Install [Ruby](https://www.ruby-lang.org/en/downloads/).
+* Install gems using the following commands.  
+`cd <this directory (design-pattern-examples-in-ruby)>`  
+`bundle install`  
 * Optionally, install an IDE (e.g. [RubyMine](https://www.jetbrains.com/ruby/download/)).
 
 Usage
