@@ -30,13 +30,8 @@ class UnderlineDisplay < Display
   public
   def show(message)
     # ˅
-    length = message.length
     puts "\"#{message}\""
-    print " "
-    for i in 0..length-1
-      print @underline_char
-    end
-    puts ""
+    puts " #{@underline_char * message.length}"
     # ˄
   end
 

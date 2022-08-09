@@ -47,11 +47,9 @@ class StringDisplay < AbstractDisplay
   private
   def write_line
     # ˅
-    print "+"       # Display an end mark "+"
-    for i in 0..@width-1
-      print "-"     # Display a line "-"
-    end
-    puts "+"        # Display an end mark "+"
+    print "+"           # Display an end mark "+"
+    print "-" * @width  # Display a line "-"
+    puts "+"            # Display an end mark "+"
     # ˄
   end
 

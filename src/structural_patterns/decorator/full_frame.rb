@@ -50,11 +50,7 @@ class FullFrame < Frame
   private
   def create_line(ch, size)
     # ˅
-    buf = StringIO.new
-    for i in 0..size-1
-      buf << ch
-    end
-    return buf.string
+    return ch * size
     # ˄
   end
 

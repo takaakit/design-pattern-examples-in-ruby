@@ -49,9 +49,7 @@ class TextDisplayImpl < DisplayImpl
   def print_line
     # ˅
     print "*"             # Display "*" mark at the beginning of a frame.
-    for i in 0..@width-1  # Display "." for the number of "width".
-      print "."
-    end
+    print "." * @width    # Display "." for the number of "width".
     puts "*"              # Display "*" mark at the end of a frame.
     # ˄
   end
