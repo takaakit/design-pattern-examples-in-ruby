@@ -15,7 +15,7 @@ A game of rock-scissors-paper. Two strategies are available:
 player1 = Player.new("Emily", MirrorStrategy.new)
 player2 = Player.new("James", RandomStrategy.new)
 
-for i in 0..99
+100.times do
   hand_of_player_1 = player1.show_hand_signal
   hand_of_player_2 = player2.show_hand_signal
 

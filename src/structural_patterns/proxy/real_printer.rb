@@ -50,7 +50,7 @@ class RealPrinter < Printer
   def heavy_task(message)
     # ˅
     print message
-    for i in 0..9
+    10.times do
       sleep(0.5)
       print "."
     end

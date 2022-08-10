@@ -43,7 +43,7 @@ class Display
   public
   def show
     # ˅
-    for i in 0..get_rows-1
+    get_rows.times do |i|
       puts get_line_text(i)
     end
     # ˄

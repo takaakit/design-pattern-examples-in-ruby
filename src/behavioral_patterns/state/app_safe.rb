@@ -149,7 +149,7 @@ class AppSafe < Context
     # ˅
     loop do
       # Advance one hour for every second of real time.
-      for hour in 0..23
+      24.times do |hour|
         set_time(hour)    # Set the time
         sleep(1)
       end

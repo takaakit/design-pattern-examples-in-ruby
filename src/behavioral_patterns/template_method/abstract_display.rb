@@ -34,7 +34,7 @@ class AbstractDisplay
   def output
     # ˅
     open
-    for i in 0..4   # Repeat write 5 times
+    5.times do    # Repeat write 5 times
       write
     end
     close

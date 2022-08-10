@@ -29,11 +29,10 @@ class PaintingCanvas < PaintingTarget
   def paint(x, y)
     # ˅
     t = TkcOval.new(@canvas,
-                x - @point_radius,
-                y - @point_radius,
-                x + @point_radius,
-                y + @point_radius
-    )
+                    x - @point_radius,
+                    y - @point_radius,
+                    x + @point_radius,
+                    y + @point_radius)
     t.fill = @painting_color
     t.width = 0
     # ˄

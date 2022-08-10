@@ -13,8 +13,8 @@ A dice game in which money increases and decreases:
 gamer = Gamer.new(100)    # The initial money is 100
 memento = gamer.create_memento  # Save the initial state
 
-for i in 1..10
-  puts "==== Turn #{i}"         # Display count
+10.times do |i|
+  puts "==== Turn #{i + 1}"     # Display count
 
   gamer.play                    # Play a game
 

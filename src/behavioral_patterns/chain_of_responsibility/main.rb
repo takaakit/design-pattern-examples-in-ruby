@@ -24,6 +24,6 @@ joseph = LimitedSupporter.new("Joseph", 5)
 emily.set_next(william).set_next(amelia).set_next(joseph)
 
 # Various troubles occurred.
-for i in 0..9
+10.times do |i|
   emily.support(Trouble.new(i))
 end

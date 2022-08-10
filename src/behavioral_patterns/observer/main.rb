@@ -14,7 +14,7 @@ number_subject.attach(DigitObserver.new(number_subject))
 number_subject.attach(BarChartObserver.new(number_subject))
 
 random = Random.new
-for i in 0..19
+20.times do
   number_subject.value = random.rand(50)
   sleep(0.2)
 end

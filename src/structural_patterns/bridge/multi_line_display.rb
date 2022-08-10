@@ -22,7 +22,7 @@ class MultiLineDisplay < Display
   def output_multiple(times)
     # ˅
     open
-    for i in 0..times-1
+    times.times do
       write
     end
     close
