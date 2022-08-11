@@ -45,7 +45,7 @@ class Context
   public
   def slide_token(token)
     # ˅
-    if token != @tokens[@current_index]
+    if token != get_token
       abort("WARNING: #{token} is expected but #{get_token} was found.")
     end
     next_token
