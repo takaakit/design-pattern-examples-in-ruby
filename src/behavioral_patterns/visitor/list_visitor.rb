@@ -36,8 +36,8 @@ class ListVisitor < Visitor
     puts "#{@current_directory}/#{directory}"
     visited_directory = @current_directory
     @current_directory = "#{@current_directory}/#{directory.name}"
-    directory.elements.each do |value|
-      value.accept(self)
+    for element in directory.elements
+      element.accept(self)
     end
     @current_directory = visited_directory
     # ˄

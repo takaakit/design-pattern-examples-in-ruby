@@ -48,7 +48,7 @@ class Context
     if token != get_token
       abort("WARNING: #{token} is expected but #{get_token} was found.")
     end
-    next_token
+    return next_token
     # ˄
   end
 

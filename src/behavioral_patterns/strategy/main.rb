@@ -40,5 +40,5 @@ player2 = Player.new("James", RandomStrategy.new)
   player2.notify_game_result(result_of_player_2, hand_of_player_2, hand_of_player_1)
 end
 puts "RESULT:"
-puts player1.to_s
-puts player2.to_s
+puts player1
+puts player2

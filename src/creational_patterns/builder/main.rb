@@ -13,13 +13,14 @@ in the same construction process.
 puts "Please enter \"plain\" or \"html\":"
 input_value = gets.chomp
 
-if input_value == "plain"
+case input_value
+when "plain" then
   plain_text_builder = PlainTextBuilder.new
   directory = Director.new(plain_text_builder)
   directory.build
   content = plain_text_builder.content
   puts content
-elsif input_value == "html"
+when "html" then
   html_builder = HTMLBuilder.new
   directory = Director.new(html_builder)
   directory.build
