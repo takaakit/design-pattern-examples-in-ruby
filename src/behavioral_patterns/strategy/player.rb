@@ -47,7 +47,7 @@ class Player
     when GameResultType::LOSS
       @loss_count += 1
       @game_count += 1
-    when GameResultType::DRAW
+    else
       @game_count += 1
     end
 

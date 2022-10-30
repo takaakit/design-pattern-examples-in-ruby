@@ -49,12 +49,12 @@ class AppMain
 
     @undo_button = TkButton.new(@root)
     @undo_button.text = "Undo"
-    @undo_button.bind("Button-1", proc{|e| undo})
+    @undo_button.bind("Button-1", proc{|_| undo})
     @undo_button.pack("side" => "left")
 
     @clear_button = TkButton.new(@root)
     @clear_button.text = "Clear"
-    @clear_button.bind("Button-1", proc{|e| clear})
+    @clear_button.bind("Button-1", proc{|_| clear})
     @clear_button.pack("side" => "left")
     # ˄
   end

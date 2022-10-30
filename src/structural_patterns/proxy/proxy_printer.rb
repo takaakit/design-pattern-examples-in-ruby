@@ -28,7 +28,7 @@ class ProxyPrinter < Printer
   public
   def get_name
     # ˅
-    if @real.nil? == false
+    if !@real.nil?
       return @real.get_name
     else
       return @current_name
@@ -39,10 +39,10 @@ class ProxyPrinter < Printer
   public
   def change_name(name)
     # ˅
-    if @real.nil? == false
+    if !@real.nil?
       @real.change_name(name)
     end
-    
+
     @current_name = name
     # ˄
   end

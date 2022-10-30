@@ -43,7 +43,7 @@ class HistoryCommand < Command
   public
   def undo
     # ˅
-    if @past_commands.empty? == false
+    if !@past_commands.empty?
       @past_commands.pop
     end
     # ˄
