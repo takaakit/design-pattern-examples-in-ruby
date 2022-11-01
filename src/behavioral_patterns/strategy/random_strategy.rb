@@ -23,7 +23,7 @@ class RandomStrategy < Strategy
   public
   def show_hand_signal
     # ˅
-    return get_hand(Random.new.rand(3))
+    get_hand(Random.new.rand(3))
     # ˄
   end
 

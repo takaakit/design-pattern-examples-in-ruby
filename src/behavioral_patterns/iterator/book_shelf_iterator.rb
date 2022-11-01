@@ -26,7 +26,7 @@ class BookShelfIterator < Iterator
   public
   def has_next
     # ˅
-    return @index < @book_shelf.number_of_books
+    @index < @book_shelf.number_of_books
     # ˄
   end
 
@@ -35,7 +35,7 @@ class BookShelfIterator < Iterator
     # ˅
     book = @book_shelf.get_at(@index)
     @index += 1
-    return book
+    book
     # ˄
   end
 

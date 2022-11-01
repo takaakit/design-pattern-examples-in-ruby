@@ -30,7 +30,7 @@ class Gamer
   public
   def create_memento
     # ˅
-    return Memento.new(@money)
+    Memento.new(@money)
     # ˄
   end
 
@@ -68,7 +68,7 @@ class Gamer
   public
   def to_s
     # ˅
-    return "[money = #{@money}]"
+    "[money = #{@money}]"
     # ˄
   end
 

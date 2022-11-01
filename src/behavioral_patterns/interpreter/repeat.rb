@@ -41,7 +41,7 @@ class Repeat < Node
   public
   def to_s
     # ˅
-    return "repeat #{@number} #{@command_list}"
+    "repeat #{@number} #{@command_list}"
     # ˄
   end
 

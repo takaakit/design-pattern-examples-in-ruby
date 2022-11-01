@@ -25,7 +25,7 @@ class Directory < FileSystemElement
   public
   def name
     # ˅
-    return @name
+    @name
     # ˄
   end
 
@@ -36,7 +36,7 @@ class Directory < FileSystemElement
     for element in @elements
       size += element.size
     end
-    return size
+    size
     # ˄
   end
 
@@ -56,7 +56,7 @@ class Directory < FileSystemElement
   def add(element)
     # ˅
     @elements.push(element)
-    return self
+    self
     # ˄
   end
 

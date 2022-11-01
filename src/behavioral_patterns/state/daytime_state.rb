@@ -46,7 +46,7 @@ class DaytimeState < State
   public
   def to_s
     # ˅
-    return "[Daytime]"
+    "[Daytime]"
     # ˄
   end
 

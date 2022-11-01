@@ -61,7 +61,7 @@ class PlainTextBuilder < Builder
   public
   def content
     # ˅
-    return @buffer.string
+    @buffer.string
     # ˄
   end
 

@@ -37,7 +37,7 @@ class Program < Node
   public
   def to_s
     # ˅
-    return "[program #{@command_list}]"
+    "[program #{@command_list}]"
     # ˄
   end
 

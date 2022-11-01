@@ -33,14 +33,14 @@ class File_ < FileSystemElement
   public
   def name
     # ˅
-    return @name
+    @name
     # ˄
   end
 
   public
   def size
     # ˅
-    return @size
+    @size
     # ˄
   end
 

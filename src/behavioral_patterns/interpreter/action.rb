@@ -39,7 +39,7 @@ class Action < Node
   public
   def to_s
     # ˅
-    return @name
+    @name
     # ˄
   end
 

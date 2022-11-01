@@ -39,7 +39,7 @@ class HandSignal
   public
   def is_stronger_than(hand)
     # ˅
-    return judge_game(hand) == 1
+    judge_game(hand) == 1
     # ˄
   end
 
@@ -54,7 +54,7 @@ class HandSignal
   public
   def to_s
     # ˅
-    return @@name[@value]
+    @@name[@value]
     # ˄
   end
 
@@ -63,11 +63,11 @@ class HandSignal
   def judge_game(hand)
     # ˅
     if @value == hand.value
-      return 0
+      0
     elsif (@value + 1) % 3 == hand.value
       return 1
     else
-      return -1
+      -1
     end
     # ˄
   end
@@ -83,6 +83,6 @@ $hands = [HandSignal.new(HandSignal::ROCK), HandSignal.new(HandSignal::SCISSORS)
 
 # Get an instance of the hand
 def get_hand(hand_value)
-  return $hands[hand_value]
+  $hands[hand_value]
 end
 # ˄

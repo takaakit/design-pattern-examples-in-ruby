@@ -22,7 +22,7 @@ class CreditCardFactory < Factory
   public
   def create_product(owner)
     # ˅
-    return CreditCard.new(owner)
+    CreditCard.new(owner)
     # ˄
   end
 

@@ -43,7 +43,7 @@ class CommandList < Node
   public
   def to_s
     # ˅
-    return "[#{@nodes.join(", ")}]"
+    "[#{@nodes.join(", ")}]"
     # ˄
   end
 

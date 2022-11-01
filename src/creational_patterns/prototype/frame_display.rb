@@ -23,7 +23,7 @@ class FrameDisplay < Display
   public
   def clone
     # ˅
-    return FrameDisplay.new(@border_char)
+    FrameDisplay.new(@border_char)
     # ˄
   end
 

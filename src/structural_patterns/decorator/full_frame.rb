@@ -22,7 +22,7 @@ class FullFrame < Frame
   public
   def get_columns
     # ˅
-    return 1 + @display.get_columns + 1
+    1 + @display.get_columns + 1
     # ˄
   end
 
@@ -30,7 +30,7 @@ class FullFrame < Frame
   public
   def get_rows
     # ˅
-    return 1 + @display.get_rows + 1
+    1 + @display.get_rows + 1
     # ˄
   end
 
@@ -38,11 +38,11 @@ class FullFrame < Frame
   def get_line_text(row)
     # ˅
     if row == 0
-      return "+#{create_line("-", @display.get_columns)}+"  # Upper frame
+      "+#{create_line("-", @display.get_columns)}+" # Upper frame
     elsif row == @display.get_rows + 1
-      return "+#{create_line("-", @display.get_columns)}+"  # Bottom frame
+      "+#{create_line("-", @display.get_columns)}+"  # Bottom frame
     else
-      return "|#{@display.get_line_text(row - 1)}|"         # Other
+      "|#{@display.get_line_text(row - 1)}|" # Other
     end
     # ˄
   end
@@ -50,7 +50,7 @@ class FullFrame < Frame
   private
   def create_line(ch, size)
     # ˅
-    return ch * size
+    ch * size
     # ˄
   end
 

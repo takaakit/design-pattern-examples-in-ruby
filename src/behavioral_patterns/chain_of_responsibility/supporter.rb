@@ -43,7 +43,7 @@ class Supporter
   def set_next(_next)
     # ˅
     @next = _next
-    return @next
+    @next
     # ˄
   end
 

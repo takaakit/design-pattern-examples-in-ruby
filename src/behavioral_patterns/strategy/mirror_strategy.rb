@@ -26,7 +26,7 @@ class MirrorStrategy < Strategy
   public
   def show_hand_signal
     # ˅
-    return @pre_opponents_hand
+    @pre_opponents_hand
     # ˄
   end
 

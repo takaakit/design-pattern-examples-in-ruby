@@ -34,7 +34,7 @@ class FileSystemElement
   public
   def to_s
     # ˅
-    return "#{name} (#{size})"
+    "#{name} (#{size})"
     # ˄
   end
 

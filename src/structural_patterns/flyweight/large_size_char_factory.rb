@@ -31,7 +31,7 @@ class LargeSizeCharFactory
       lsc = LargeSizeChar.new(char_name)     # Create an instance
       @pool_chars[char_name] = lsc
     end
-    return lsc
+    lsc
     # ˄
   end
 

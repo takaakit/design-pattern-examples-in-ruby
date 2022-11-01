@@ -29,7 +29,7 @@ class TableData < Data_
     end
     buffer << "</tr>\n"
     buffer << "</table></td>\n"
-    return buffer.string
+    buffer.string
     # ˄
   end
 

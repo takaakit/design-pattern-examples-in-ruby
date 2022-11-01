@@ -20,7 +20,7 @@ class ListLink < Link
   public
   def to_html
     # ˅
-    return "  <li><a href=\"#{@url}\">#{@name}</a></li>\n"
+    "  <li><a href=\"#{@url}\">#{@name}</a></li>\n"
     # ˄
   end
 

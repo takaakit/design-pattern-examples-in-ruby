@@ -38,7 +38,7 @@ class ColleagueRadioButton < Colleague
   public
   def is_selected
     # ˅
-    return @@selected_value == @radio_button.value
+    @@selected_value == @radio_button.value
     # ˄
   end
 

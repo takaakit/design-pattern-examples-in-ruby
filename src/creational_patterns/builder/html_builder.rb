@@ -65,7 +65,7 @@ class HTMLBuilder < Builder
   public
   def file_name
     # ˅
-    return @_file_name
+    @_file_name
     # ˄
   end
 

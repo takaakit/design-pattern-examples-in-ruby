@@ -21,7 +21,7 @@ class MoodySupporter < Supporter
   protected
   def can_handle(trouble)
     # ˅
-    return trouble.id % 2 == 1
+    trouble.id % 2 == 1
     # ˄
   end
 

@@ -16,21 +16,21 @@ class TableFactory < Factory
   public
   def create_page(title, author)
     # ˅
-    return TablePage.new(title, author)
+    TablePage.new(title, author)
     # ˄
   end
 
   public
   def create_link(name, url)
     # ˅
-    return TableLink.new(name, url)
+    TableLink.new(name, url)
     # ˄
   end
 
   public
   def create_data(name)
     # ˅
-    return TableData.new(name)
+    TableData.new(name)
     # ˄
   end
 

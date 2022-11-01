@@ -24,7 +24,7 @@ class NumberSubject < Subject
   public
   def value
     # ˅
-    return @value
+    @value
     # ˄
   end
 

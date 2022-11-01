@@ -26,7 +26,7 @@ class Trouble
   public
   def to_s
     # ˅
-    return "[Trouble #{@id}]"
+    "[Trouble #{@id}]"
     # ˄
   end
 

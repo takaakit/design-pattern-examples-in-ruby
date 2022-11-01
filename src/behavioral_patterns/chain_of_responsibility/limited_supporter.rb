@@ -24,7 +24,7 @@ class LimitedSupporter < Supporter
   protected
   def can_handle(trouble)
     # ˅
-    return trouble.id <= @limit_id
+    trouble.id <= @limit_id
     # ˄
   end
 

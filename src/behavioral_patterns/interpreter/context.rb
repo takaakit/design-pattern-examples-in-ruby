@@ -28,9 +28,9 @@ class Context
     if @current_index < @tokens.length
       pre_index = @current_index
       @current_index += 1
-      return @tokens[pre_index]
+      @tokens[pre_index]
     else
-      return nil
+      nil
     end
     # ˄
   end
@@ -38,7 +38,7 @@ class Context
   public
   def get_token
     # ˅
-    return @tokens[@current_index]
+    @tokens[@current_index]
     # ˄
   end
 
@@ -48,7 +48,7 @@ class Context
     if token != get_token
       abort("WARNING: #{token} is expected but #{get_token} was found.")
     end
-    return next_token
+    next_token
     # ˄
   end
 
@@ -56,7 +56,7 @@ class Context
   def get_number
     # ˅
     if !get_token.match(/\D/)
-      return get_token
+      get_token
     else
       abort("WARNING: #{get_token}")
     end

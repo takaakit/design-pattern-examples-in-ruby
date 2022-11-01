@@ -39,7 +39,7 @@ class ColleagueButton < Colleague
   public
   def is_pressed
     # ˅
-    return (@button.state != "disabled" and @is_pressed)
+    (@button.state != "disabled" and @is_pressed)
     # ˄
   end
 

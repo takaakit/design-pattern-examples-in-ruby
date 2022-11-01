@@ -32,7 +32,7 @@ class Player
   public
   def show_hand_signal
     # ˅
-    return @strategy.show_hand_signal
+    @strategy.show_hand_signal
     # ˄
   end
 
@@ -58,7 +58,7 @@ class Player
   public
   def to_s
     # ˅
-    return "#{@name} [#{@game_count} games, #{@win_count} won, #{@loss_count} lost, #{(@game_count - @win_count - @loss_count)} drew]"
+    "#{@name} [#{@game_count} games, #{@win_count} won, #{@loss_count} lost, #{(@game_count - @win_count - @loss_count)} drew]"
     # ˄
   end
 

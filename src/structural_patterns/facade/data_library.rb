@@ -21,7 +21,7 @@ class DataLibrary
         prop[key] = value
       end
     end
-    return prop
+    prop
     # ˄
   end
 

@@ -30,7 +30,7 @@ class ListPage < Page
     buffer << "</ul>\n"
     buffer << "<hr><address>#{@author}</address>"
     buffer << "</body></html>\n"
-    return buffer.string
+    buffer.string
     # ˄
   end
 

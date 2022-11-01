@@ -41,7 +41,7 @@ class Command < Node
   public
   def to_s
     # ˅
-    return "#{@node}"
+    "#{@node}"
     # ˄
   end
 

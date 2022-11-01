@@ -16,21 +16,21 @@ class ListFactory < Factory
   public
   def create_page(title, author)
     # ˅
-    return ListPage.new(title, author)
+    ListPage.new(title, author)
     # ˄
   end
 
   public
   def create_link(name, url)
     # ˅
-    return ListLink.new(name, url)
+    ListLink.new(name, url)
     # ˄
   end
 
   public
   def create_data(name)
     # ˅
-    return ListData.new(name)
+    ListData.new(name)
     # ˄
   end
 

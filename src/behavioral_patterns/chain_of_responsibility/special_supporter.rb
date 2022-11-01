@@ -24,7 +24,7 @@ class SpecialSupporter < Supporter
   protected
   def can_handle(trouble)
     # ˅
-    return trouble.id == @target_id
+    trouble.id == @target_id
     # ˄
   end
 

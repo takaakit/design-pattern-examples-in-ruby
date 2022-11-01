@@ -20,7 +20,7 @@ class Factory
 
     # Write post-creation code here.
 
-    return product
+    product
     # ˄
   end
 

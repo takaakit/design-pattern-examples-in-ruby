@@ -26,7 +26,7 @@ class ListData < Data_
       buffer << item.to_html
     end
     buffer << "</ul></li>\n"
-    return buffer.string
+    buffer.string
     # ˄
   end
 

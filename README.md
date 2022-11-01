@@ -28,7 +28,7 @@ require_relative 'file_system_element'
 # Since class name of "File" can not be used duplicately, the class name is "File_".
 class File_ < FileSystemElement
   # ˅
-  
+
   # ˄
 
   public
@@ -46,14 +46,14 @@ class File_ < FileSystemElement
   public
   def name
     # ˅
-    return @name
+    @name
     # ˄
   end
 
   public
   def size
     # ˅
-    return @size
+    @size
     # ˄
   end
 
@@ -66,7 +66,7 @@ class File_ < FileSystemElement
   end
 
   # ˅
-  
+
   # ˄
 end
 

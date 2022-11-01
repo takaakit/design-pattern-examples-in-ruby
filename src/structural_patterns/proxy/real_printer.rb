@@ -23,7 +23,7 @@ class RealPrinter < Printer
   public
   def get_name
     # ˅
-    return @name
+    @name
     # ˄
   end
 

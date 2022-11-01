@@ -25,7 +25,7 @@ class MessageDisplay < Display
   public
   def get_columns
     # ˅
-    return @message.length
+    @message.length
     # ˄
   end
 
@@ -33,7 +33,7 @@ class MessageDisplay < Display
   public
   def get_rows
     # ˅
-    return 1
+    1
     # ˄
   end
 
@@ -41,9 +41,9 @@ class MessageDisplay < Display
   def get_line_text(row)
     # ˅
     if row == 0
-      return @message
+      @message
     else
-      return ""
+      ""
     end
     # ˄
   end

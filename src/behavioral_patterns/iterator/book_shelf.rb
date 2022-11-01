@@ -29,14 +29,14 @@ class BookShelf < Aggregate
   public
   def iterator
     # ˅
-    return BookShelfIterator.new(self)
+    BookShelfIterator.new(self)
     # ˄
   end
 
   public
   def get_at(index)
     # ˅
-    return @books.at(index)
+    @books.at(index)
     # ˄
   end
 

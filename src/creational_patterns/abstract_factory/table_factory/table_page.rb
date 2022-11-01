@@ -31,7 +31,7 @@ class TablePage < Page
     buffer << "</table>\n"
     buffer << "<hr><address>#{@author}</address>\n"
     buffer << "</body></html>\n"
-    return buffer.string
+    buffer.string
     # ˄
   end
 

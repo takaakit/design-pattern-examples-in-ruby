@@ -35,7 +35,7 @@ class ColleagueTextField < Colleague
   public
   def is_empty
     # ˅
-    return @text_field.get.empty?
+    @text_field.get.empty?
     # ˄
   end
 

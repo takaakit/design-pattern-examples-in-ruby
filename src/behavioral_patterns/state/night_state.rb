@@ -46,7 +46,7 @@ class NightState < State
   public
   def to_s
     # ˅
-    return "[Night]"
+    "[Night]"
     # ˄
   end
 
