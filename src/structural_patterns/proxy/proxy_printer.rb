@@ -39,7 +39,7 @@ class ProxyPrinter < Printer
   public
   def change_name(name)
     # ˅
-    if !@real.nil?
+    unless @real.nil?
       @real.change_name(name)
     end
 
